@@ -998,9 +998,9 @@ dialog p{font-size:14px;color:var(--muted-light)}
 </footer>
 
 <!-- Asistente KREA (chat guiado) -->
-<button class="bot-launch" id="botLaunch" aria-label="Abrir el asistente de KREA" aria-controls="botWin" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><span>Asistente IA</span></button>
+<button class="bot-launch" id="botLaunch" aria-label="Abrir el asistente de KREA Digital Studio, agencia de IA" aria-controls="botWin" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><span>Asistente IA</span></button>
 <section class="bot-win" id="botWin" role="dialog" aria-label="Asistente de KREA" hidden>
-  <header class="bot-head"><span class="bot-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><div><b>Asistente KREA</b><small>Agente IA · responde al momento</small></div><button type="button" class="bot-x" id="botClose" aria-label="Cerrar asistente">×</button></header>
+  <header class="bot-head"><span class="bot-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><div><b>KREA Digital Studio</b><small>Agencia de IA · asistente virtual en línea</small></div><button type="button" class="bot-x" id="botClose" aria-label="Cerrar asistente">×</button></header>
   <div class="bot-body" id="botBody" aria-live="polite"></div>
   <div class="bot-opts" id="botOpts"></div>
   <form class="bot-input" id="botForm" autocomplete="off"><input id="botText" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"><button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z"/></svg></button></form>
@@ -1008,13 +1008,13 @@ dialog p{font-size:14px;color:var(--muted-light)}
 
 <!-- WhatsApp (verde, distintivo oficial) -->
 <div class="wa-fab" id="waFab">
-  <div class="wa-bubble" id="waBubble"><button type="button" class="wa-x" id="waClose" aria-label="Cerrar">×</button><span class="wa-mini"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>¿Hablamos por WhatsApp?</b>Te responde una persona del equipo.</div></div>
+  <div class="wa-bubble" id="waBubble"><button type="button" class="wa-x" id="waClose" aria-label="Cerrar">×</button><span class="wa-mini"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>KREA Digital Studio · Agencia de IA</b>¿Hablamos por WhatsApp? Te responde una persona del equipo.</div></div>
   <button type="button" class="wa-circle" id="waOpen" aria-label="Abrir WhatsApp de KREA" aria-controls="waWin" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></button>
 </div>
 <section class="wa-win" id="waWin" role="dialog" aria-label="Escríbenos por WhatsApp" hidden>
-  <header class="wa-head"><span class="wa-av"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>KREA Digital Studio</b><small>WhatsApp · 653 807 314 · suele responder en minutos</small></div><button type="button" class="bot-x" id="waX" aria-label="Cerrar">×</button></header>
+  <header class="wa-head"><span class="wa-av"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>KREA Digital Studio</b><small>Agencia de IA · WhatsApp 653 807 314</small></div><button type="button" class="bot-x" id="waX" aria-label="Cerrar">×</button></header>
   <div class="wa-body">
-    <div class="wa-msg">¡Hola! 👋 Somos KREA. ¿Sobre qué quieres hablar? Elige una opción y te abrimos WhatsApp con el mensaje preparado.</div>
+    <div class="wa-msg">¡Hola! 👋 Somos <b>KREA Digital Studio, agencia de IA</b>. ¿Sobre qué quieres hablar? Elige una opción y te abrimos WhatsApp con el mensaje preparado.</div>
     <div class="wa-topics" id="waTopics">
       <button type="button" data-t="un agente de IA para atender WhatsApp, Instagram o llamadas">🤖 Agente de IA para mi negocio</button>
       <button type="button" data-t="automatizar citas, reservas y recordatorios">📅 Automatizar citas y reservas</button>
@@ -1158,7 +1158,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
   /* ---------- WhatsApp ---------- */
   var win=document.getElementById('waWin'), bub=document.getElementById('waBubble'), go=document.getElementById('waGo');
   var topic='información sobre vuestros servicios', sector=document.getElementById('waSector');
-  function waMsg(){var t='Hola KREA 👋 Vengo de vuestra web y me interesa '+topic+'.';var sv=sector.value.trim();if(sv)t+=' Mi negocio: '+sv+'.';t+=' ¿Podemos hablar?';return t}
+  function waMsg(){var t='Hola KREA Digital Studio 👋 Vengo de vuestra web y me interesa '+topic+'.';var sv=sector.value.trim();if(sv)t+=' Mi negocio: '+sv+'.';t+=' ¿Podemos hablar?';return t}
   function upd(){go.href=waLink(waMsg())}
   function openWa(){closeBot();win.hidden=false;bub.classList.remove('show');document.getElementById('waOpen').setAttribute('aria-expanded','true');upd()}
   function closeWa(){win.hidden=true;document.getElementById('waOpen').setAttribute('aria-expanded','false')}
@@ -1188,7 +1188,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
   var packs={e:'Esencial (desde 1.500 € + 200 €/mes)',p:'Sistema Pro (desde 3.000 € + 250 €/mes)',x:'Empresa 360 (desde 4.500 € + 300 €/mes)'};
   var ejemplos={'Clínica o salud':'confirma y recuerda citas, responde dudas de tratamientos y reduce las citas a las que nadie acude','Inmobiliaria':'responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores','Reformas o construcción':'recoge fotos y medidas, agenda visitas técnicas y prepara la información del presupuesto','Estética o belleza':'reserva citas, envía recordatorios y responde precios y disponibilidad 24/7','Restauración':'gestiona reservas de mesa, responde horarios y carta y avisa de cambios','Otro sector':'responde a tus clientes al momento, agenda citas y hace seguimiento hasta cerrar la venta'};
   function step(k){
-    if(k==='hola'){say('¡Hola! Soy el <b>asistente de KREA</b> 🤖. En 4 preguntas te digo qué puede hacer un agente de IA por tu negocio y qué pack te encaja.',function(){say('¿A qué se dedica tu negocio?',function(){choices(Object.keys(ejemplos).map(function(x){return{l:x,go:function(){st.sector=x;step('canal')}}}))})})}
+    if(k==='hola'){say('¡Hola! 👋 Somos <b>KREA Digital Studio, agencia de IA</b>. Soy su asistente virtual 🤖 y en 4 preguntas te digo qué puede hacer un agente de IA por tu negocio y qué pack te encaja.',function(){say('¿A qué se dedica tu negocio?',function(){choices(Object.keys(ejemplos).map(function(x){return{l:x,go:function(){st.sector=x;step('canal')}}}))})})}
     if(k==='canal'){say('Perfecto. ¿Por dónde te escriben o llaman más tus clientes?',function(){choices(['WhatsApp','Instagram','Teléfono','Correo','Por varios canales'].map(function(x){return{l:x,go:function(){st.canal=x;step('tarea')}}}))})}
     if(k==='tarea'){say('¿Qué te gustaría que hiciera el agente por ti?',function(){choices(['Responder dudas y precios','Agendar citas y reservas','Captar y seguir clientes','Todo lo anterior'].map(function(x){return{l:x,go:function(){st.tarea=x;step('vol')}}}))})}
     if(k==='vol'){say('Última: ¿cuántas consultas recibes más o menos al día?',function(){choices(['Menos de 10','Entre 10 y 30','Entre 30 y 100','Más de 100'].map(function(x){return{l:x,go:function(){st.vol=x;step('fin')}}}))})}
@@ -1197,7 +1197,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
       st.pack=packs[p];
       say('Con lo que me cuentas, para <b>'+st.sector.toLowerCase()+'</b> un agente en <b>'+st.canal.toLowerCase()+'</b> '+ejemplos[st.sector]+'.',function(){
         say('Te recomiendo el pack <b>'+st.pack+'</b>. El precio final lo cerramos en la auditoría gratuita. ¿Cómo seguimos?',function(){
-          var resumen='Hola KREA 👋 He hablado con vuestro asistente en la web. Sector: '+st.sector+'. Canal principal: '+st.canal+'. Quiero que el agente: '+st.tarea+'. Consultas al día: '+st.vol+'. Pack recomendado: '+st.pack+'. ¿Hablamos?';
+          var resumen='Hola KREA Digital Studio 👋 He hablado con vuestro asistente en la web. Sector: '+st.sector+'. Canal principal: '+st.canal+'. Quiero que el agente: '+st.tarea+'. Consultas al día: '+st.vol+'. Pack recomendado: '+st.pack+'. ¿Hablamos?';
           choices([{l:'Seguir por WhatsApp',href:waLink(resumen),wa:true},{l:'Reservar auditoría gratis',go:function(){prefill();closeBot();location.hash='auditoria';document.getElementById('auditoria').scrollIntoView({behavior:'smooth'})}},{l:'Empezar de nuevo',go:function(){st={};step('hola')}}]);
         })})}
   }
@@ -1222,7 +1222,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
     [/d[oó]nde|sevilla|ubicaci|oficina/i,'Estamos en Sevilla y trabajamos con negocios de toda España por videollamada.'],
     [/contrato|permanencia/i,'Te lo explicamos todo por escrito antes de empezar: alcance, precio cerrado y condiciones. Nada se activa sin tu visto bueno.'],
     [/gracias/i,'¡A ti! Si quieres, te paso con el equipo por WhatsApp para seguir hablando.'],
-    [/hola|buenas|buenos/i,'¡Hola! 😊 Soy el asistente de KREA. Puedo contarte cómo funciona un agente de IA, los precios de los packs, plazos o recomendarte uno para tu negocio. ¿Qué te gustaría saber?']
+    [/hola|buenas|buenos/i,'¡Hola! 😊 Somos KREA Digital Studio, agencia de IA. Soy su asistente virtual y puedo contarte cómo funciona un agente de IA, los precios de los packs, plazos o recomendarte uno para tu negocio. ¿Qué te gustaría saber?']
   ];
   var hist=[];
   function offline(q){var hit=faq.find(function(f){return f[0].test(q)});
