@@ -1210,11 +1210,23 @@ dialog p{font-size:14px;color:var(--muted-light)}
     [/logo|marca|sello|identidad/i,'Creamos o renovamos tu marca: logos, sellos, colores, tipografías y piezas para redes.'],
     [/datos|rgpd|seguridad|privacidad/i,'Trabajamos según el RGPD. El agente solo usa la información necesaria y avisa de que es un asistente.'],
     [/humano|persona|hablar con|llamar/i,'¡Claro! Te paso con el equipo por WhatsApp o puedes reservar la auditoría gratuita.'],
-    [/hola|buenas|buenos/i,'¡Hola! ¿En qué te ayudo? Puedo explicarte precios, plazos o recomendarte un pack.']
+    [/esencial/i,'El pack <b>Esencial</b> (desde 1.500 € + 200 €/mes) incluye 1 canal (WhatsApp o chat web), entrenado con tus servicios, precios y horarios, respuestas 24/7, recogida de datos y citas, y paso a una persona cuando hace falta.'],
+    [/pro\b|sistema pro/i,'El <b>Sistema Pro</b> (desde 3.000 € + 250 €/mes) suma hasta 3 canales (WhatsApp, Instagram y correo), agenda conectada con recordatorios, CRM con la ficha de cada cliente y seguimiento automático. Es el más elegido.'],
+    [/360|empresa/i,'<b>Empresa 360</b> (desde 4.500 € + 300 €/mes) añade agente de llamadas con voz, automatización de presupuestos y facturas, integraciones a medida y página de captación.'],
+    [/mensual|al mes|mantenimiento|cuota|soporte/i,'La cuota mensual (200, 250 o 300 € según el pack) incluye el funcionamiento del agente, supervisión de conversaciones, ajustes, mejoras y soporte 24/7.'],
+    [/auditor|gratis|gratuit/i,'La auditoría IA es <b>gratuita</b>: 20 minutos por videollamada para ver por dónde te escriben, qué se repite y qué te conviene automatizar primero.'],
+    [/c[oó]mo funciona|qu[eé] es un agente|chatbot|robot/i,'Un agente de IA es como un empleado digital: entiende lo que escribe tu cliente, responde con la información de tu negocio, agenda citas, guarda los datos y avisa a tu equipo. Si no sabe algo, pasa la conversación a una persona.'],
+    [/cl[ií]nica|dental|m[eé]dic|fisio/i,'Para clínicas el agente confirma y recuerda citas, responde dudas de tratamientos y precios y reduce las citas a las que nadie acude.'],
+    [/inmobiliar|piso|alquiler|vivienda/i,'Para inmobiliarias el agente responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores. Tienes un ejemplo real en la portada.'],
+    [/reforma|obra|construc/i,'Para reformas y construcción el agente recoge fotos y medidas, agenda visitas técnicas y prepara los datos del presupuesto. Hicimos las apps de obras y presupuestos de Construcciones SGM.'],
+    [/d[oó]nde|sevilla|ubicaci|oficina/i,'Estamos en Sevilla y trabajamos con negocios de toda España por videollamada.'],
+    [/contrato|permanencia/i,'Te lo explicamos todo por escrito antes de empezar: alcance, precio cerrado y condiciones. Nada se activa sin tu visto bueno.'],
+    [/gracias/i,'¡A ti! Si quieres, te paso con el equipo por WhatsApp para seguir hablando.'],
+    [/hola|buenas|buenos/i,'¡Hola! 😊 Soy el asistente de KREA. Puedo contarte cómo funciona un agente de IA, los precios de los packs, plazos o recomendarte uno para tu negocio. ¿Qué te gustaría saber?']
   ];
   document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('botText'),q=i.value.trim();if(!q)return;i.value='';add('me',q.replace(/</g,'&lt;'));
     var hit=faq.find(function(f){return f[0].test(q)});
-    say(hit?hit[1]:'Buena pregunta. Para darte una respuesta exacta te paso con el equipo de KREA.',function(){choices([{l:'Hablar por WhatsApp',href:waLink('Hola KREA 👋 Vengo de vuestra web. Mi pregunta: '+q),wa:true},{l:'Recomiéndame un pack',go:function(){st={};step('hola')}}])})});
+    say(hit?hit[1]:'Buena pregunta 🙂 Para darte una respuesta exacta, lo mejor es que te atienda una persona del equipo. ¿Te paso por WhatsApp?',function(){choices([{l:'Hablar por WhatsApp',href:waLink('Hola KREA 👋 Vengo de vuestra web. Mi pregunta: '+q),wa:true},{l:'Recomiéndame un pack',go:function(){st={};step('hola')}}])})});
 })();
 </script>
 </body>
