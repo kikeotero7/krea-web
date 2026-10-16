@@ -445,14 +445,14 @@ dialog p{font-size:14px;color:var(--muted-light)}
     <div class="phone-zone" aria-label="Ejemplo de conversación de un agente de IA por WhatsApp">
       <div class="phone">
         <div class="screen">
-          <div class="chat-top"><span class="av">RG</span><div><b>Reformas Giralda</b><small>en línea · responde el asistente</small></div></div>
+          <div class="chat-top"><span class="av">GH</span><div><b>Giralda Home · Inmobiliaria</b><small>en línea · responde el asistente</small></div></div>
           <div class="chat" id="heroChat" aria-live="off"></div>
           <div class="chat-input">Escribe un mensaje</div>
         </div>
       </div>
-      <div class="chip c1" data-chip="1"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div>Cita creada en el calendario<small>Jueves · 10:00</small></div></div>
-      <div class="chip c2" data-chip="2"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div>Cliente guardado en el CRM<small>Baño · 6 m² · Nervión</small></div></div>
-      <div class="chip c3" data-chip="3"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span><div>Aviso enviado al equipo<small>Recordatorio programado</small></div></div>
+      <div class="chip c1" data-chip="1"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div>Visita en el calendario<small>Sábado · 11:00</small></div></div>
+      <div class="chip c2" data-chip="2"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div>Comprador guardado en el CRM<small>3 dormitorios · Nervión</small></div></div>
+      <div class="chip c3" data-chip="3"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span><div>Aviso al asesor<small>Ficha y ubicación enviadas</small></div></div>
     </div>
   </div>
 </section>
@@ -506,9 +506,9 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <ul class="ticks"><li>Responde preguntas sobre servicios, precios y horarios</li><li>Propone huecos libres y agenda la cita en tu calendario</li><li>Envía recordatorios para reducir las citas a las que no se presenta nadie</li><li>Pide fotos o datos para preparar presupuestos</li><li>Pasa la conversación a tu equipo cuando hace falta</li></ul>
         <a class="btn btn-gold" href="#auditoria">Quiero un agente de WhatsApp</a>
       </div>
-      <div class="demo"><div class="demo-head"><span>Ejemplo · Centro de estética</span><b>WhatsApp</b></div><div class="demo-body">
-        <div class="msg in">Hola, ¿tenéis hueco para limpieza facial esta semana?<time>18:02</time></div>
-        <div class="msg out"><span class="tag">Asistente</span>¡Hola, Lucía! Sí: miércoles a las 17:00 o viernes a las 11:30. La limpieza facial dura 60 min y cuesta 45 €. ¿Cuál te viene mejor?<time>18:02</time></div>
+      <div class="demo"><div class="demo-head"><span>Ejemplo · Clínica dental</span><b>WhatsApp</b></div><div class="demo-body">
+        <div class="msg in">Hola, ¿tenéis cita para una limpieza dental esta semana?<time>18:02</time></div>
+        <div class="msg out"><span class="tag">Asistente</span>¡Hola, Lucía! Sí: miércoles a las 17:00 o viernes a las 11:30. La limpieza dura 45 min y cuesta 50 €. ¿Cuál te viene mejor?<time>18:02</time></div>
         <div class="msg in">El viernes perfecto<time>18:03</time></div>
         <div class="msg out"><span class="tag">Asistente</span>Reservado: viernes a las 11:30. Te mandaré un recordatorio el jueves. ¡Hasta pronto!<time>18:03</time></div>
         <div class="note"><span>Cita en Google Calendar</span><span>Recordatorio programado</span></div>
@@ -864,12 +864,12 @@ dialog p{font-size:14px;color:var(--muted-light)}
   /* Chat animado de la portada */
   var chat=document.getElementById('heroChat');
   var script=[
-    ['in','Hola, ¿hacéis reformas de baño? Quería pedir presupuesto','21:48'],
-    ['out','¡Hola! Sí, reformamos baños completos y parciales. ¿Cuántos metros tiene más o menos y en qué zona estás?','21:48'],
-    ['in','Unos 6 m², en Nervión','21:49'],
-    ['out','Perfecto. Para darte un precio cerrado, un técnico pasa a medir sin compromiso. ¿Te viene bien el jueves a las 10:00 o el viernes a las 17:30?','21:49'],
-    ['in','Jueves a las 10','21:50'],
-    ['out','Hecho: visita confirmada el jueves a las 10:00 en Nervión. Te enviaremos un recordatorio el día antes.','21:50']
+    ['in','Hola, he visto el piso de 3 dormitorios en Nervión. ¿Sigue disponible?','21:48'],
+    ['out','¡Hola! Sí, sigue disponible: 3 dormitorios, 2 baños, 95 m² y terraza, por 289.000 €. ¿Lo buscas para vivir o como inversión?','21:48'],
+    ['in','Para vivir. ¿Se puede ver esta semana?','21:49'],
+    ['out','Claro. Tengo hueco el jueves a las 18:00 o el sábado a las 11:00. ¿Cuál te viene mejor?','21:49'],
+    ['in','El sábado a las 11','21:50'],
+    ['out','Hecho: visita confirmada el sábado a las 11:00. Te envío la ubicación y la ficha del piso. Javier, nuestro asesor, te estará esperando.','21:50']
   ];
   var chips=document.querySelectorAll('[data-chip]');
   function bubble(m){var d=document.createElement('div');d.className='msg '+m[0];d.innerHTML=(m[0]==='out'?'<span class="tag">Asistente IA</span>':'')+m[1]+'<time>'+m[2]+'</time>';return d}
