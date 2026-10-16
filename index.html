@@ -382,18 +382,58 @@ footer{margin-left:var(--rail);background:var(--ink);border-top:1px solid var(--
 .float a{width:46px;height:46px;display:grid;place-items:center;background:var(--gold);color:var(--ink);border-radius:var(--r);box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .float a svg{width:20px;height:20px}
 .wa-fab{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(22px,env(safe-area-inset-bottom,0px));z-index:80;display:flex;align-items:flex-end;gap:12px}
-.wa-circle{width:62px;height:62px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.4);position:relative;transition:transform .2s}
+.wa-circle{width:62px;height:62px;border:0;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.4);position:relative;transition:transform .2s}
 .wa-circle:hover{transform:scale(1.07)}
 .wa-circle svg{width:34px;height:34px}
 .wa-circle::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;opacity:.55;animation:waPulse 2.2s ease-out infinite;z-index:-1}
 @keyframes waPulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.75);opacity:0}}
-.wa-bubble{position:relative;background:var(--paper);color:var(--ink);border-radius:14px 14px 4px 14px;padding:12px 30px 12px 14px;font-size:13.5px;line-height:1.4;max-width:230px;box-shadow:0 14px 34px rgba(0,0,0,.35);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .4s,transform .4s;margin-bottom:8px}
-.wa-bubble.show{opacity:1;transform:none;pointer-events:auto;cursor:pointer}
-.wa-bubble b{display:block;font-size:14.5px;margin-bottom:2px}
-.wa-x{position:absolute;top:4px;right:6px;background:none;border:0;font-size:18px;line-height:1;color:var(--muted-light);padding:4px}
+.wa-bubble{position:relative;display:flex;gap:10px;align-items:center;background:#fff;color:#111b21;border-left:4px solid #25d366;border-radius:12px;padding:12px 30px 12px 12px;font-size:13px;line-height:1.35;max-width:270px;box-shadow:0 14px 34px rgba(0,0,0,.35);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .4s,transform .4s;margin-bottom:8px;cursor:pointer}
+.wa-bubble.show{opacity:1;transform:none;pointer-events:auto}
+.wa-bubble b{display:block;font-size:14px;margin-bottom:2px}
+.wa-mini{flex:none;width:34px;height:34px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center}
+.wa-mini svg{width:20px;height:20px}
+.wa-x,.bot-x{position:absolute;top:4px;right:6px;background:none;border:0;font-size:20px;line-height:1;color:#667781;padding:4px;cursor:pointer}
 .wa-btn{background:#25d366!important;color:#fff!important;border-color:#25d366!important}
 .wa-btn svg{width:24px;height:24px}
-.float{bottom:calc(max(22px,env(safe-area-inset-bottom,0px)) + 76px)}
+.wa-win,.bot-win{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(max(22px,env(safe-area-inset-bottom,0px)) + 76px);z-index:90;width:min(360px,calc(100vw - 28px));border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;max-height:min(600px,calc(100svh - 120px))}
+.wa-win{background:#efeae2}
+.wa-head,.bot-head{position:relative;display:flex;gap:10px;align-items:center;padding:14px 40px 14px 14px}
+.wa-head{background:#075e54;color:#fff}
+.wa-head small,.bot-head small{display:block;font-size:11.5px;opacity:.85}
+.wa-head .bot-x{color:#fff}
+.wa-av,.bot-av{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.wa-av{background:#25d366;color:#fff}.wa-av svg{width:22px;height:22px}
+.wa-body{padding:14px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.wa-msg{background:#fff;color:#111b21;border-radius:0 10px 10px 10px;padding:10px 12px;font-size:13.5px;line-height:1.45;max-width:90%}
+.wa-topics{display:grid;gap:6px}
+.wa-topics button{text-align:left;background:#fff;border:1px solid #d1d7db;border-radius:10px;padding:10px 12px;font-size:13.5px;color:#111b21;cursor:pointer}
+.wa-topics button[aria-pressed="true"]{border-color:#25d366;background:#e7f8ee;font-weight:600}
+.wa-sector{font-size:12px;color:#54656f;display:grid;gap:4px}
+.wa-sector i{font-style:normal;opacity:.8}
+.wa-sector input{font:inherit;font-size:14px;border:1px solid #d1d7db;border-radius:8px;padding:9px 10px;background:#fff;color:#111b21}
+.wa-go{display:flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:14px;font-size:15px}
+.wa-go svg{width:22px;height:22px}
+.bot-launch{position:fixed;left:calc(var(--rail) + 20px);bottom:max(22px,env(safe-area-inset-bottom,0px));z-index:80;display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--ivory);border:1px solid var(--gold);border-radius:40px;padding:10px 18px 10px 10px;font-weight:700;font-size:13px;letter-spacing:.06em;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.bot-launch svg{width:34px;height:34px;padding:6px;border-radius:50%;background:var(--gold);color:var(--ink)}
+.bot-launch:hover{background:var(--ink-2)}
+.bot-win{left:calc(var(--rail) + 20px);right:auto;background:var(--ink-soft);border:1px solid var(--gold)}
+.bot-head{background:var(--ink);color:var(--ivory);border-bottom:1px solid var(--line-dark)}
+.bot-av{background:var(--gold);color:var(--ink)}.bot-av svg{width:22px;height:22px}
+.bot-head .bot-x{color:var(--muted-dark)}
+.bot-body{padding:14px;overflow:auto;display:flex;flex-direction:column;gap:8px;flex:1;min-height:180px}
+.bm{max-width:88%;font-size:13.5px;line-height:1.45;padding:9px 12px;border-radius:12px;animation:pop .3s ease both}
+.bm.bot{background:var(--ink-2);color:var(--ivory);border:1px solid var(--line-dark);border-top-left-radius:3px;align-self:flex-start}
+.bm.me{background:var(--gold);color:var(--ink);border-top-right-radius:3px;align-self:flex-end;font-weight:600}
+.bm.bot b{color:var(--gold-light)}
+.bm .typing{background:none;padding:0}
+.bot-opts{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 12px}
+.bot-opts button,.bot-opts a{font:inherit;font-size:12.5px;border:1px solid var(--gold);color:var(--gold-light);background:transparent;border-radius:30px;padding:7px 12px;cursor:pointer;text-decoration:none}
+.bot-opts button:hover,.bot-opts a:hover{background:var(--gold);color:var(--ink)}
+.bot-opts .wa{border-color:#25d366;color:#fff;background:#25d366}
+.bot-input{display:flex;gap:6px;padding:10px;border-top:1px solid var(--line-dark);background:var(--ink)}
+.bot-input input{flex:1;min-width:0;font:inherit;font-size:14px;background:var(--ink-2);color:var(--ivory);border:1px solid var(--line-dark);border-radius:20px;padding:9px 14px}
+.bot-input button{width:40px;height:40px;border-radius:50%;border:0;background:var(--gold);color:var(--ink);display:grid;place-items:center}
+.bot-input button svg{width:18px;height:18px}
 .mbar{display:none}
 
 dialog{max-width:640px;width:calc(100% - 32px);border:0;border-radius:var(--r);padding:30px;background:var(--paper);color:var(--ink)}
@@ -435,7 +475,10 @@ dialog p{font-size:14px;color:var(--muted-light)}
   .float{display:none}
   .wa-fab{bottom:calc(84px + env(safe-area-inset-bottom,0px));right:14px}
   .wa-circle{display:none}
-  .wa-bubble{margin-bottom:0;border-radius:14px 14px 4px 14px}
+  .wa-bubble{margin-bottom:0}
+  .bot-launch{left:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));padding:6px;border-radius:50%}
+  .bot-launch span{display:none}
+  .wa-win,.bot-win{left:10px;right:10px;width:auto;bottom:calc(80px + env(safe-area-inset-bottom,0px))}
   .mbar{display:grid;grid-template-columns:1fr auto;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(9,9,9,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line-dark);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
   .mbar .btn{justify-content:center;padding:15px 16px}
   .mbar .alt{width:52px;padding:0;justify-content:center}
@@ -954,17 +997,40 @@ dialog p{font-size:14px;color:var(--muted-light)}
   </div>
 </footer>
 
-<div class="float" aria-label="Accesos rápidos">
-  <a href="#auditoria" aria-label="Reservar auditoría"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></a>
+<!-- Asistente KREA (chat guiado) -->
+<button class="bot-launch" id="botLaunch" aria-label="Abrir el asistente de KREA" aria-controls="botWin" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><span>Asistente IA</span></button>
+<section class="bot-win" id="botWin" role="dialog" aria-label="Asistente de KREA" hidden>
+  <header class="bot-head"><span class="bot-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><div><b>Asistente KREA</b><small>Agente IA · responde al momento</small></div><button type="button" class="bot-x" id="botClose" aria-label="Cerrar asistente">×</button></header>
+  <div class="bot-body" id="botBody" aria-live="polite"></div>
+  <div class="bot-opts" id="botOpts"></div>
+  <form class="bot-input" id="botForm" autocomplete="off"><input id="botText" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"><button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z"/></svg></button></form>
+</section>
 
-</div>
+<!-- WhatsApp (verde, distintivo oficial) -->
 <div class="wa-fab" id="waFab">
-  <div class="wa-bubble" id="waBubble" role="status"><button type="button" class="wa-x" id="waClose" aria-label="Cerrar">×</button><b>¿Hablamos?</b>Escríbenos por WhatsApp y te respondemos en minutos.</div>
-  <a class="wa-circle" href="https://wa.me/34653807314?text=Hola%20KREA%2C%20quiero%20informaci%C3%B3n%20sobre%20agentes%20de%20IA%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp al 653 807 314"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+  <div class="wa-bubble" id="waBubble"><button type="button" class="wa-x" id="waClose" aria-label="Cerrar">×</button><span class="wa-mini"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>¿Hablamos por WhatsApp?</b>Te responde una persona del equipo.</div></div>
+  <button type="button" class="wa-circle" id="waOpen" aria-label="Abrir WhatsApp de KREA" aria-controls="waWin" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></button>
 </div>
+<section class="wa-win" id="waWin" role="dialog" aria-label="Escríbenos por WhatsApp" hidden>
+  <header class="wa-head"><span class="wa-av"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></span><div><b>KREA Digital Studio</b><small>WhatsApp · 653 807 314 · suele responder en minutos</small></div><button type="button" class="bot-x" id="waX" aria-label="Cerrar">×</button></header>
+  <div class="wa-body">
+    <div class="wa-msg">¡Hola! 👋 Somos KREA. ¿Sobre qué quieres hablar? Elige una opción y te abrimos WhatsApp con el mensaje preparado.</div>
+    <div class="wa-topics" id="waTopics">
+      <button type="button" data-t="un agente de IA para atender WhatsApp, Instagram o llamadas">🤖 Agente de IA para mi negocio</button>
+      <button type="button" data-t="automatizar citas, reservas y recordatorios">📅 Automatizar citas y reservas</button>
+      <button type="button" data-t="una web o una app a medida">💻 Web o app a medida</button>
+      <button type="button" data-t="crear o renovar mi marca (logo, sellos, identidad)">✨ Marca, logo e identidad</button>
+      <button type="button" data-t="conocer precios y packs">💶 Precios y packs</button>
+      <button type="button" data-t="reservar la auditoría IA gratuita">🎯 Auditoría IA gratuita</button>
+    </div>
+    <label class="wa-sector" for="waSector">Tu negocio <i>(opcional)</i><input id="waSector" placeholder="Ej.: clínica dental, inmobiliaria…"></label>
+  </div>
+  <a class="wa-go" id="waGo" href="https://wa.me/34653807314" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>Abrir WhatsApp</a>
+</section>
+
 <div class="mbar">
   <a class="btn btn-gold" href="#auditoria">Auditoría IA gratis</a>
-  <a class="btn alt wa-btn" href="https://wa.me/34653807314?text=Hola%20KREA%2C%20quiero%20informaci%C3%B3n%20sobre%20agentes%20de%20IA%20para%20mi%20negocio." id="mbarAlt" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+  <button type="button" class="btn alt wa-btn" id="mbarWa" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></button>
 </div>
 
 <dialog id="legal">
@@ -980,14 +1046,6 @@ dialog p{font-size:14px;color:var(--muted-light)}
   document.documentElement.classList.add('js');
   /* Número de WhatsApp de KREA (formato internacional sin +, ej. 34600111222). Vacío = se usa Instagram. */
   var WA = '34653807314';
-  /* Burbuja de WhatsApp: aparece a los 6 s, se puede cerrar */
-  var bub=document.getElementById('waBubble'), closed=false;
-  try{closed=sessionStorage.getItem('waClosed')==='1'}catch(e){}
-  if(!closed){setTimeout(function(){bub.classList.add('show')},6000)}
-  bub.addEventListener('click',function(e){if(e.target.id!=='waClose'){window.open(document.querySelector('.wa-circle').href,'_blank','noopener')}});
-  document.getElementById('waClose').addEventListener('click',function(e){e.stopPropagation();bub.classList.remove('show');try{sessionStorage.setItem('waClosed','1')}catch(e){}});
-
-
   /* Cabecera sólida al hacer scroll */
   var tb=document.getElementById('topbar');
   function onScroll(){tb.classList.toggle('solid',window.scrollY>40)}
@@ -1090,6 +1148,73 @@ dialog p{font-size:14px;color:var(--muted-light)}
       location.href='mailto:contacto@kreadigitalstudio.es?subject='+encodeURIComponent('Auditoría IA gratuita')+'&body='+encodeURIComponent(b);
     }).finally(function(){btn.disabled=false;btn.textContent='Reservar mi auditoría gratuita'});
   });
+})();
+</script>
+
+<script>
+(function(){
+  var NUM='34653807314';
+  function waLink(t){return 'https://wa.me/'+NUM+'?text='+encodeURIComponent(t)}
+  /* ---------- WhatsApp ---------- */
+  var win=document.getElementById('waWin'), bub=document.getElementById('waBubble'), go=document.getElementById('waGo');
+  var topic='información sobre vuestros servicios', sector=document.getElementById('waSector');
+  function waMsg(){var t='Hola KREA 👋 Vengo de vuestra web y me interesa '+topic+'.';var sv=sector.value.trim();if(sv)t+=' Mi negocio: '+sv+'.';t+=' ¿Podemos hablar?';return t}
+  function upd(){go.href=waLink(waMsg())}
+  function openWa(){closeBot();win.hidden=false;bub.classList.remove('show');document.getElementById('waOpen').setAttribute('aria-expanded','true');upd()}
+  function closeWa(){win.hidden=true;document.getElementById('waOpen').setAttribute('aria-expanded','false')}
+  document.getElementById('waOpen').addEventListener('click',function(){win.hidden?openWa():closeWa()});
+  document.getElementById('mbarWa').addEventListener('click',function(){win.hidden?openWa():closeWa()});
+  document.getElementById('waX').addEventListener('click',closeWa);
+  document.querySelectorAll('#waTopics button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('#waTopics button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');topic=b.dataset.t;upd();})});
+  sector.addEventListener('input',upd);
+  var closed=false;try{closed=sessionStorage.getItem('waClosed')==='1'}catch(e){}
+  if(!closed)setTimeout(function(){if(win.hidden&&bw.hidden)bub.classList.add('show')},7000);
+  bub.addEventListener('click',function(e){if(e.target.id!=='waClose')openWa()});
+  document.getElementById('waClose').addEventListener('click',function(e){e.stopPropagation();bub.classList.remove('show');try{sessionStorage.setItem('waClosed','1')}catch(e){}});
+  upd();
+
+  /* ---------- Asistente KREA (agente guía) ---------- */
+  var bw=document.getElementById('botWin'), body=document.getElementById('botBody'), opts=document.getElementById('botOpts'), started=false, st={};
+  function openBot(){closeWa();bub.classList.remove('show');bw.hidden=false;document.getElementById('botLaunch').setAttribute('aria-expanded','true');if(!started){started=true;step('hola')}document.getElementById('botText').focus({preventScroll:true})}
+  function closeBot(){bw.hidden=true;document.getElementById('botLaunch').setAttribute('aria-expanded','false')}
+  document.getElementById('botLaunch').addEventListener('click',function(){bw.hidden?openBot():closeBot()});
+  document.getElementById('botClose').addEventListener('click',closeBot);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeBot();closeWa()}});
+  function add(cls,html){var d=document.createElement('div');d.className='bm '+cls;d.innerHTML=html;body.appendChild(d);body.scrollTop=body.scrollHeight;return d}
+  function say(html,cb){var t=add('bot','<span class="typing" style="display:flex;gap:4px"><i></i><i></i><i></i></span>');setTimeout(function(){t.innerHTML=html;body.scrollTop=body.scrollHeight;cb&&cb()},650)}
+  function choices(list){opts.innerHTML='';list.forEach(function(c){var el;if(c.href){el=document.createElement('a');el.href=c.href;el.target='_blank';el.rel='noopener';if(c.wa)el.className='wa'}else{el=document.createElement('button');el.type='button';el.addEventListener('click',function(){add('me',c.l);opts.innerHTML='';c.go()})}el.textContent=c.l;opts.appendChild(el)})}
+  var packs={e:'Esencial (desde 1.500 € + 200 €/mes)',p:'Sistema Pro (desde 3.000 € + 250 €/mes)',x:'Empresa 360 (desde 4.500 € + 300 €/mes)'};
+  var ejemplos={'Clínica o salud':'confirma y recuerda citas, responde dudas de tratamientos y reduce las citas a las que nadie acude','Inmobiliaria':'responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores','Reformas o construcción':'recoge fotos y medidas, agenda visitas técnicas y prepara la información del presupuesto','Estética o belleza':'reserva citas, envía recordatorios y responde precios y disponibilidad 24/7','Restauración':'gestiona reservas de mesa, responde horarios y carta y avisa de cambios','Otro sector':'responde a tus clientes al momento, agenda citas y hace seguimiento hasta cerrar la venta'};
+  function step(k){
+    if(k==='hola'){say('¡Hola! Soy el <b>asistente de KREA</b> 🤖. En 4 preguntas te digo qué puede hacer un agente de IA por tu negocio y qué pack te encaja.',function(){say('¿A qué se dedica tu negocio?',function(){choices(Object.keys(ejemplos).map(function(x){return{l:x,go:function(){st.sector=x;step('canal')}}}))})})}
+    if(k==='canal'){say('Perfecto. ¿Por dónde te escriben o llaman más tus clientes?',function(){choices(['WhatsApp','Instagram','Teléfono','Correo','Por varios canales'].map(function(x){return{l:x,go:function(){st.canal=x;step('tarea')}}}))})}
+    if(k==='tarea'){say('¿Qué te gustaría que hiciera el agente por ti?',function(){choices(['Responder dudas y precios','Agendar citas y reservas','Captar y seguir clientes','Todo lo anterior'].map(function(x){return{l:x,go:function(){st.tarea=x;step('vol')}}}))})}
+    if(k==='vol'){say('Última: ¿cuántas consultas recibes más o menos al día?',function(){choices(['Menos de 10','Entre 10 y 30','Entre 30 y 100','Más de 100'].map(function(x){return{l:x,go:function(){st.vol=x;step('fin')}}}))})}
+    if(k==='fin'){
+      var p='e';if(st.canal==='Por varios canales'||st.tarea==='Todo lo anterior'||st.vol==='Entre 30 y 100')p='p';if(st.canal==='Teléfono'||st.vol==='Más de 100')p='x';
+      st.pack=packs[p];
+      say('Con lo que me cuentas, para <b>'+st.sector.toLowerCase()+'</b> un agente en <b>'+st.canal.toLowerCase()+'</b> '+ejemplos[st.sector]+'.',function(){
+        say('Te recomiendo el pack <b>'+st.pack+'</b>. El precio final lo cerramos en la auditoría gratuita. ¿Cómo seguimos?',function(){
+          var resumen='Hola KREA 👋 He hablado con vuestro asistente en la web. Sector: '+st.sector+'. Canal principal: '+st.canal+'. Quiero que el agente: '+st.tarea+'. Consultas al día: '+st.vol+'. Pack recomendado: '+st.pack+'. ¿Hablamos?';
+          choices([{l:'Seguir por WhatsApp',href:waLink(resumen),wa:true},{l:'Reservar auditoría gratis',go:function(){prefill();closeBot();location.hash='auditoria';document.getElementById('auditoria').scrollIntoView({behavior:'smooth'})}},{l:'Empezar de nuevo',go:function(){st={};step('hola')}}]);
+        })})}
+  }
+  function prefill(){try{var pk=st.pack.split(' (')[0];var sel=document.getElementById('f-pack');[].forEach.call(sel.options,function(o){if(o.text===pk)sel.value=o.text});document.getElementById('f-company').value=st.sector;document.getElementById('f-msg').value='Canal principal: '+st.canal+'\nQuiero que el agente: '+st.tarea+'\nConsultas al día: '+st.vol}catch(e){}}
+  var faq=[
+    [/precio|cuesta|cu[aá]nto|tarifa|pack/i,'Tenemos 3 packs: <b>Esencial</b> desde 1.500 € + 200 €/mes, <b>Sistema Pro</b> desde 3.000 € + 250 €/mes y <b>Empresa 360</b> desde 4.500 € + 300 €/mes. Sin IVA; el precio final se cierra en la auditoría gratuita.'],
+    [/tarda|tiempo|cu[aá]ndo|plazo/i,'El pack Esencial suele estar funcionando en unas 2 semanas; el Sistema Pro en 3-4 semanas.'],
+    [/whats|instagram|llamad|tel[eé]fono|correo|canal/i,'Montamos agentes para WhatsApp, Instagram, correo y llamadas con voz. Se conectan a tu calendario, tu CRM y tus programas.'],
+    [/web|app|aplicaci/i,'Sí, también diseñamos webs y apps a medida, y podemos integrarlas con tu agente. Mira la sección de proyectos 👇'],
+    [/logo|marca|sello|identidad/i,'Creamos o renovamos tu marca: logos, sellos, colores, tipografías y piezas para redes.'],
+    [/datos|rgpd|seguridad|privacidad/i,'Trabajamos según el RGPD. El agente solo usa la información necesaria y avisa de que es un asistente.'],
+    [/humano|persona|hablar con|llamar/i,'¡Claro! Te paso con el equipo por WhatsApp o puedes reservar la auditoría gratuita.'],
+    [/hola|buenas|buenos/i,'¡Hola! ¿En qué te ayudo? Puedo explicarte precios, plazos o recomendarte un pack.']
+  ];
+  document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('botText'),q=i.value.trim();if(!q)return;i.value='';add('me',q.replace(/</g,'&lt;'));
+    var hit=faq.find(function(f){return f[0].test(q)});
+    say(hit?hit[1]:'Buena pregunta. Para darte una respuesta exacta te paso con el equipo de KREA.',function(){choices([{l:'Hablar por WhatsApp',href:waLink('Hola KREA 👋 Vengo de vuestra web. Mi pregunta: '+q),wa:true},{l:'Recomiéndame un pack',go:function(){st={};step('hola')}}])})});
 })();
 </script>
 </body>
