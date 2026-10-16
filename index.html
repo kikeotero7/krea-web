@@ -255,6 +255,17 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .svc span{color:var(--muted-light);font-size:15px}
 
 /* ---------- Portfolio ---------- */
+.feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,50px);align-items:center;text-decoration:none;margin-bottom:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line-dark)}
+.feature .shot{aspect-ratio:16/10;overflow:hidden;border-radius:var(--r);border:1px solid var(--line-dark)}
+.feature .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.feature:hover .shot img{transform:scale(1.03)}
+.f-txt small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.f-txt b{display:block;font-family:var(--f-display);font-weight:500;font-size:clamp(30px,3.4vw,46px);text-transform:uppercase;line-height:1}
+.f-txt p{color:var(--muted-dark);margin:16px 0}
+.f-txt ul{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:8px}
+.f-txt li{border:1px solid var(--line-dark);border-radius:30px;padding:6px 12px;font-size:12.5px;color:var(--ivory)}
+.f-txt .st{display:inline-block;flex:none;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line-dark);border-radius:30px;padding:5px 10px;color:var(--gold)}
+.f-txt .st.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#5fd37c;margin-right:6px;vertical-align:1px}
 .works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .work{text-decoration:none;display:flex;flex-direction:column;gap:14px}
 .work .shot{aspect-ratio:16/10.5;overflow:hidden;border-radius:var(--r);border:1px solid var(--line-dark);background:var(--ink-2)}
@@ -360,7 +371,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
   .topbar .logo img{height:32px}
   .topbar nav .btn{display:none}
   .menu-btn{display:grid}
-  .sec-head,.panel,.calc,.studio,.faq-grid,.contact,.extras,.method-photo{grid-template-columns:1fr}
+  .sec-head,.panel,.calc,.studio,.faq-grid,.contact,.extras,.method-photo,.feature{grid-template-columns:1fr}
   .pains{grid-template-columns:1fr}
   .pain,.pain + .pain{padding:26px 0;border-right:0;border-bottom:1px solid var(--line-light)}
   .answer{grid-template-columns:1fr;text-align:left;padding:26px}
@@ -702,15 +713,25 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <p class="eyebrow"><b>06</b> Trabajo seleccionado</p>
         <h2>Proyectos con <span class="script">identidad propia.</span></h2>
       </div>
-      <p class="lead">Webs y apps publicadas para negocios reales. Ábrelas y compruébalo en tu móvil.</p>
+      <p class="lead">Webs y apps publicadas para empresas y profesionales reales. Ábrelas y compruébalo en tu móvil.</p>
     </div>
+    <a class="feature rv" href="https://sgm.kreadigitalstudio.es/" target="_blank" rel="noopener">
+      <div class="shot"><img src="assets/p-sgm.webp" alt="Apps de Construcciones SGM: presupuestos y fichajes" loading="lazy" width="960" height="600"></div>
+      <div class="f-txt">
+        <small>Construcción y reformas · Sevilla</small>
+        <b>Construcciones SGM</b>
+        <p>Dos aplicaciones para organizar la empresa: presupuestos con partidas, precios y PDF para el cliente, y control de obras con fichajes por código, calendario de asistencia e incidencias.</p>
+        <ul><li>Presupuestos y gestión de reformas</li><li>Fichajes, obras y empleados</li><li>Desde el móvil y el ordenador</li></ul>
+        <span class="st live">Online</span>
+      </div>
+    </a>
     <div class="works">
-      <a class="work rv" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot" data-n="Crazy Circus"><img src="https://kreadigitalstudio.es/assets/portfolio-crazy.webp" onerror="this.parentNode.classList.add('nf');this.remove()" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></a>
+      <a class="work rv" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></a>
       <a class="work rv" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-adanero.webp" alt="App de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></a>
       <a class="work rv" href="https://velvetcontour.kreadigitalstudio.es/experiencia" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" loading="lazy"></div><div class="meta"><div><small>Atelier de maquillaje · Marca y web</small><b>Velvet Contour</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot" data-n="Rober Ruiz"><img src="https://kreadigitalstudio.es/assets/portfolio-robert-actualizado.webp" onerror="this.parentNode.classList.add('nf');this.remove()" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Portfolio de tatuaje</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></a>
+      <a class="work rv" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Tatuaje · Triana, Sevilla</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></a>
       <a class="work rv" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st live">Online</span></div></a>
-      <div class="work rv"><div class="shot" data-n="David Murias"><img src="https://kreadigitalstudio.es/assets/portfolio-murias-actualizado.webp" onerror="this.parentNode.classList.add('nf');this.remove()" alt="Web de David Murias, filósofo y escritor" loading="lazy"></div><div class="meta"><div><small>Filosofía y divulgación</small><b>David Murias</b></div><span class="st">En evolución</span></div></div>
+      <a class="work rv" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo y escritor" loading="lazy"></div><div class="meta"><div><small>Filosofía y divulgación</small><b>David Murias</b></div><span class="st live">Online</span></div></a>
     </div>
   </div>
 </section>
