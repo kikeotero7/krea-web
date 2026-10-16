@@ -1224,9 +1224,21 @@ dialog p{font-size:14px;color:var(--muted-light)}
     [/gracias/i,'¡A ti! Si quieres, te paso con el equipo por WhatsApp para seguir hablando.'],
     [/hola|buenas|buenos/i,'¡Hola! 😊 Soy el asistente de KREA. Puedo contarte cómo funciona un agente de IA, los precios de los packs, plazos o recomendarte uno para tu negocio. ¿Qué te gustaría saber?']
   ];
-  document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('botText'),q=i.value.trim();if(!q)return;i.value='';add('me',q.replace(/</g,'&lt;'));
-    var hit=faq.find(function(f){return f[0].test(q)});
-    say(hit?hit[1]:'Buena pregunta 🙂 Para darte una respuesta exacta, lo mejor es que te atienda una persona del equipo. ¿Te paso por WhatsApp?',function(){choices([{l:'Hablar por WhatsApp',href:waLink('Hola KREA 👋 Vengo de vuestra web. Mi pregunta: '+q),wa:true},{l:'Recomiéndame un pack',go:function(){st={};step('hola')}}])})});
+  var hist=[];
+  function offline(q){var hit=faq.find(function(f){return f[0].test(q)});
+    say(hit?hit[1]:'Buena pregunta 🙂 Para darte una respuesta exacta, lo mejor es que te atienda una persona del equipo. ¿Te paso por WhatsApp?',function(){choices([{l:'Hablar por WhatsApp',href:waLink('Hola KREA 👋 Vengo de vuestra web. Mi pregunta: '+q),wa:true},{l:'Recomiéndame un pack',go:function(){st={};step('hola')}}])})}
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')}
+  document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('botText'),q=i.value.trim();if(!q)return;i.value='';add('me',esc(q));opts.innerHTML='';
+    hist.push({role:'user',content:q});
+    var t=add('bot','<span class="typing" style="display:flex;gap:4px"><i></i><i></i><i></i></span>');
+    var ctrl=('AbortController' in window)?new AbortController():null; var to=setTimeout(function(){ctrl&&ctrl.abort()},20000);
+    fetch('asistente.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist}),signal:ctrl?ctrl.signal:undefined})
+    .then(function(r){return r.json()}).then(function(j){clearTimeout(to);
+      if(!j||!j.ok)throw 0; t.innerHTML=esc(j.reply); body.scrollTop=body.scrollHeight; hist.push({role:'assistant',content:j.reply});
+      var resumen='Hola KREA 👋 He hablado con vuestro asistente en la web. Mi última pregunta: '+q;
+      choices([{l:'Seguir por WhatsApp',href:waLink(resumen),wa:true},{l:'Reservar auditoría gratis',go:function(){closeBot();document.getElementById('auditoria').scrollIntoView({behavior:'smooth'})}}]);
+    }).catch(function(){clearTimeout(to);t.remove();hist.pop();offline(q)});
+  });
 })();
 </script>
 </body>
