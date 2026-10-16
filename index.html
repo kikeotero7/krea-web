@@ -762,7 +762,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <span class="lvl">Nivel 1</span>
         <h3>Esencial</h3>
         <p class="for">Tu primer agente. Para comercios y profesionales que reciben muchas consultas repetidas.</p>
-        <div class="price"><small>Desde</small><strong>1.500 €</strong><em>+ 200 €/mes de mantenimiento</em></div>
+        <div class="price"><small>Desde</small><strong>1.500 €</strong><em>+ 250 €/mes de mantenimiento</em></div>
         <ul class="ticks">
           <li>1 canal: WhatsApp o chat en tu web</li>
           <li>Entrenado con tus servicios, precios y horarios</li>
@@ -778,7 +778,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <span class="lvl">Nivel 2</span>
         <h3>Sistema Pro</h3>
         <p class="for">Captación y citas en automático. Para negocios que quieren más clientes sin contratar a nadie.</p>
-        <div class="price"><small>Desde</small><strong>3.000 €</strong><em>+ 250 €/mes de mantenimiento</em></div>
+        <div class="price"><small>Desde</small><strong>3.000 €</strong><em>+ 300 €/mes de mantenimiento</em></div>
         <ul class="ticks">
           <li class="all">Todo lo del pack Esencial</li>
           <li>Hasta 3 canales: WhatsApp, Instagram y correo</li>
@@ -793,7 +793,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <span class="lvl">Nivel 3</span>
         <h3>Empresa 360</h3>
         <p class="for">Tu empresa funcionando en automático. Atención, ventas y procesos internos conectados.</p>
-        <div class="price"><small>Desde</small><strong>4.500 €</strong><em>+ 300 €/mes de mantenimiento</em></div>
+        <div class="price"><small>Desde</small><strong>4.500 €</strong><em>+ 400 €/mes de mantenimiento</em></div>
         <ul class="ticks">
           <li class="all">Todo lo del Sistema Pro</li>
           <li>Agente de llamadas con voz natural</li>
@@ -1193,7 +1193,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
   function add(cls,html){var d=document.createElement('div');d.className='bm '+cls;d.innerHTML=html;body.appendChild(d);body.scrollTop=body.scrollHeight;return d}
   function say(html,cb){var t=add('bot','<span class="typing" style="display:flex;gap:4px"><i></i><i></i><i></i></span>');setTimeout(function(){t.innerHTML=html;body.scrollTop=body.scrollHeight;cb&&cb()},650)}
   function choices(list){opts.innerHTML='';list.forEach(function(c){var el;if(c.href){el=document.createElement('a');el.href=c.href;el.target='_blank';el.rel='noopener';if(c.wa)el.className='wa'}else{el=document.createElement('button');el.type='button';el.addEventListener('click',function(){add('me',c.l);opts.innerHTML='';c.go()})}el.textContent=c.l;opts.appendChild(el)})}
-  var packs={e:'Esencial (desde 1.500 € + 200 €/mes)',p:'Sistema Pro (desde 3.000 € + 250 €/mes)',x:'Empresa 360 (desde 4.500 € + 300 €/mes)'};
+  var packs={e:'Esencial (desde 1.500 € + 250 €/mes)',p:'Sistema Pro (desde 3.000 € + 300 €/mes)',x:'Empresa 360 (desde 4.500 € + 400 €/mes)'};
   var ejemplos={'Clínica o salud':'confirma y recuerda citas, responde dudas de tratamientos y reduce las citas a las que nadie acude','Inmobiliaria':'responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores','Reformas o construcción':'recoge fotos y medidas, agenda visitas técnicas y prepara la información del presupuesto','Estética o belleza':'reserva citas, envía recordatorios y responde precios y disponibilidad 24/7','Restauración':'gestiona reservas de mesa, responde horarios y carta y avisa de cambios','Otro sector':'responde a tus clientes al momento, agenda citas y hace seguimiento hasta cerrar la venta'};
   function step(k){
     if(k==='hola'){say('¡Hola! 👋 Somos <b>KREA Digital Studio, agencia de IA</b>. Soy su asistente virtual 🤖 y en 4 preguntas te digo qué puede hacer un agente de IA por tu negocio y qué pack te encaja.',function(){say('¿A qué se dedica tu negocio?',function(){choices(Object.keys(ejemplos).map(function(x){return{l:x,go:function(){st.sector=x;step('canal')}}}))})})}
@@ -1211,17 +1211,17 @@ dialog p{font-size:14px;color:var(--muted-light)}
   }
   function prefill(){try{var pk=st.pack.split(' (')[0];var sel=document.getElementById('f-pack');[].forEach.call(sel.options,function(o){if(o.text===pk)sel.value=o.text});document.getElementById('f-company').value=st.sector;document.getElementById('f-msg').value='Canal principal: '+st.canal+'\nQuiero que el agente: '+st.tarea+'\nConsultas al día: '+st.vol}catch(e){}}
   var faq=[
-    [/precio|cuesta|cu[aá]nto|tarifa|pack/i,'Tenemos 3 packs: <b>Esencial</b> desde 1.500 € + 200 €/mes, <b>Sistema Pro</b> desde 3.000 € + 250 €/mes y <b>Empresa 360</b> desde 4.500 € + 300 €/mes. Sin IVA; el precio final se cierra en la auditoría gratuita.'],
+    [/precio|cuesta|cu[aá]nto|tarifa|pack/i,'Tenemos 3 packs: <b>Esencial</b> desde 1.500 € + 250 €/mes, <b>Sistema Pro</b> desde 3.000 € + 300 €/mes y <b>Empresa 360</b> desde 4.500 € + 400 €/mes. Sin IVA; el precio final se cierra en la auditoría gratuita.'],
     [/tarda|tiempo|cu[aá]ndo|plazo/i,'El pack Esencial suele estar funcionando en unas 2 semanas; el Sistema Pro en 3-4 semanas.'],
     [/whats|instagram|llamad|tel[eé]fono|correo|canal/i,'Montamos agentes para WhatsApp, Instagram, correo y llamadas con voz. Se conectan a tu calendario, tu CRM y tus programas.'],
     [/web|app|aplicaci/i,'Sí, también diseñamos webs y apps a medida, y podemos integrarlas con tu agente. Mira la sección de proyectos 👇'],
     [/logo|marca|sello|identidad/i,'Creamos o renovamos tu marca: logos, sellos, colores, tipografías y piezas para redes.'],
     [/datos|rgpd|seguridad|privacidad/i,'Trabajamos según el RGPD. El agente solo usa la información necesaria y avisa de que es un asistente.'],
     [/humano|persona|hablar con|llamar/i,'¡Claro! Te paso con el equipo por WhatsApp o puedes reservar la auditoría gratuita.'],
-    [/esencial/i,'El pack <b>Esencial</b> (desde 1.500 € + 200 €/mes) incluye 1 canal (WhatsApp o chat web), entrenado con tus servicios, precios y horarios, respuestas 24/7, recogida de datos y citas, y paso a una persona cuando hace falta.'],
-    [/pro\b|sistema pro/i,'El <b>Sistema Pro</b> (desde 3.000 € + 250 €/mes) suma hasta 3 canales (WhatsApp, Instagram y correo), agenda conectada con recordatorios, CRM con la ficha de cada cliente y seguimiento automático. Es el más elegido.'],
-    [/360|empresa/i,'<b>Empresa 360</b> (desde 4.500 € + 300 €/mes) añade agente de llamadas con voz, automatización de presupuestos y facturas, integraciones a medida y página de captación.'],
-    [/mensual|al mes|mantenimiento|cuota|soporte/i,'La cuota mensual (200, 250 o 300 € según el pack) incluye el funcionamiento del agente, supervisión de conversaciones, ajustes, mejoras y soporte 24/7.'],
+    [/esencial/i,'El pack <b>Esencial</b> (desde 1.500 € + 250 €/mes) incluye 1 canal (WhatsApp o chat web), entrenado con tus servicios, precios y horarios, respuestas 24/7, recogida de datos y citas, y paso a una persona cuando hace falta.'],
+    [/pro\b|sistema pro/i,'El <b>Sistema Pro</b> (desde 3.000 € + 300 €/mes) suma hasta 3 canales (WhatsApp, Instagram y correo), agenda conectada con recordatorios, CRM con la ficha de cada cliente y seguimiento automático. Es el más elegido.'],
+    [/360|empresa/i,'<b>Empresa 360</b> (desde 4.500 € + 400 €/mes) añade agente de llamadas con voz, automatización de presupuestos y facturas, integraciones a medida y página de captación.'],
+    [/mensual|al mes|mantenimiento|cuota|soporte/i,'La cuota mensual (250, 300 o 400 € según el pack) incluye el funcionamiento del agente, supervisión de conversaciones, ajustes, mejoras y soporte 24/7.'],
     [/auditor|gratis|gratuit/i,'La auditoría IA es <b>gratuita</b>: 20 minutos por videollamada para ver por dónde te escriben, qué se repite y qué te conviene automatizar primero.'],
     [/c[oó]mo funciona|qu[eé] es un agente|chatbot|robot/i,'Un agente de IA es como un empleado digital: entiende lo que escribe tu cliente, responde con la información de tu negocio, agenda citas, guarda los datos y avisa a tu equipo. Si no sabe algo, pasa la conversación a una persona.'],
     [/cl[ií]nica|dental|m[eé]dic|fisio/i,'Para clínicas el agente confirma y recuerda citas, responde dudas de tratamientos y precios y reduce las citas a las que nadie acude.'],

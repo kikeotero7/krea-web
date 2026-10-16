@@ -49,9 +49,9 @@ QUÉ HACE KREA
 - Sectores habituales: clínicas, inmobiliarias, reformas y construcción, estética, restauración, academias, talleres y despachos.
 
 PACKS DE AGENTES (precios orientativos, sin IVA; el precio final se cierra tras la auditoría gratuita)
-- Esencial: desde 1.500 € + 200 €/mes. 1 canal (WhatsApp o chat web), entrenado con servicios, precios y horarios, respuestas 24/7, recogida de datos y solicitudes de cita, paso a una persona, 2 rondas de ajustes. Listo en unas 2 semanas.
-- Sistema Pro (el más elegido): desde 3.000 € + 250 €/mes. Todo lo anterior + hasta 3 canales (WhatsApp, Instagram, correo), agenda conectada con citas y recordatorios, CRM con ficha de cliente, seguimiento automático, informe mensual y formación. 3-4 semanas.
-- Empresa 360: desde 4.500 € + 300 €/mes. Todo lo anterior + agente de llamadas con voz, automatización de presupuestos, avisos y facturas, integraciones a medida, página de captación, soporte prioritario y revisión trimestral. El plazo depende de las integraciones.
+- Esencial: desde 1.500 € + 250 €/mes. 1 canal (WhatsApp o chat web), entrenado con servicios, precios y horarios, respuestas 24/7, recogida de datos y solicitudes de cita, paso a una persona, 2 rondas de ajustes. Listo en unas 2 semanas.
+- Sistema Pro (el más elegido): desde 3.000 € + 300 €/mes. Todo lo anterior + hasta 3 canales (WhatsApp, Instagram, correo), agenda conectada con citas y recordatorios, CRM con ficha de cliente, seguimiento automático, informe mensual y formación. 3-4 semanas.
+- Empresa 360: desde 4.500 € + 400 €/mes. Todo lo anterior + agente de llamadas con voz, automatización de presupuestos, avisos y facturas, integraciones a medida, página de captación, soporte prioritario y revisión trimestral. El plazo depende de las integraciones.
 - La cuota mensual incluye funcionamiento del agente, supervisión, ajustes, mejoras y soporte. Los costes de uso de servicios externos (por ejemplo mensajes de WhatsApp Business) se detallan en la propuesta.
 - Webs, apps y marca: precio a medida según el proyecto (se valora en la auditoría o por WhatsApp).
 
