@@ -71,12 +71,13 @@ button{font:inherit;cursor:pointer}
 .menu-btn{display:none}
 
 /* Menú pantalla completa */
-.menu{position:fixed;inset:0;background:var(--ink);z-index:120;display:flex;flex-direction:column;justify-content:center;padding:90px var(--gut) 40px;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+.menu{position:fixed;inset:0;background:var(--ink);z-index:120;display:flex;flex-direction:column;justify-content:center;padding:90px max(var(--gut),calc((100vw - 560px)/2)) 40px;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
 .menu.open{visibility:visible;opacity:1}
-.menu a.m{font-family:var(--f-display);font-size:clamp(26px,5vw,48px);text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid var(--line-dark);display:flex;justify-content:space-between;align-items:baseline}
+.menu a.m{padding:12px 0!important;font-family:var(--f-display);font-size:clamp(20px,2vw,26px);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid var(--line-dark);display:flex;justify-content:space-between;align-items:baseline}
 .menu a.m span{font-family:var(--f-body);font-size:11px;letter-spacing:.2em;color:var(--gold)}
 .menu a.m:hover{color:var(--gold)}
 .menu .close{position:absolute;top:18px;right:var(--gut)}
+.menu-logo{position:absolute;top:18px;left:var(--gut);height:36px;width:auto}
 .menu .btn{margin-top:28px;align-self:flex-start}
 
 /* ---------- Estructura general ---------- */
@@ -537,6 +538,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
 </header>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú">
+  <img class="menu-logo" src="assets/logo-krea-oscuro.webp" alt="KREA Digital Studio" width="143" height="40">
   <button class="icon-btn close" id="menuClose" aria-label="Cerrar menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   <a class="m" href="#servicios">Servicios <span>00</span></a>
   <a class="m" href="#agentes">Agentes IA <span>01</span></a>
