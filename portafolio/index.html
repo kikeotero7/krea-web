@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portafolio · KREA Digital Studio</title>
+<meta name="description" content="Proyectos publicados por KREA Digital Studio: apps a medida, webs, marca y agentes de IA.">
+<link rel="canonical" href="https://kreadigitalstudio.es/portafolio/">
+<meta name="theme-color" content="#090909">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:title" content="Portafolio · KREA Digital Studio"><meta property="og:description" content="Apps a medida, webs, marca y agentes de IA publicados por KREA Digital Studio, Sevilla."><meta property="og:image" content="https://kreadigitalstudio.es/assets/og-krea.jpg"><meta property="og:url" content="https://kreadigitalstudio.es/portafolio/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: dossier del estudio en tinta y oro, mismo sistema que la web de KREA; cada proyecto es una ficha con captura, qué se hizo y su dirección pública */
+:root{
+  --ink:#090909; --ink-2:#14130f; --ivory:#f4f0e7; --muted:rgba(244,240,231,.66); --line:rgba(244,240,231,.14);
+  --gold:#caa43a; --gold-light:#e0c46d; --live:#3ddc84;
+  --f-display:"Oswald",Impact,"Arial Narrow",sans-serif;
+  --f-body:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --f-script:"Cormorant Garamond",Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--ink);color:var(--ivory);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:.005em}
+.script{font-family:var(--f-script);font-style:italic;font-weight:600;text-transform:none;color:var(--gold)}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0}
+
+/* Cabecera */
+.head{padding-block:clamp(40px,7vw,90px) clamp(28px,4vw,48px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(36px,6vw,70px)}
+.brand img{width:150px;height:auto;display:block}
+.brand .date{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.head h1{font-size:clamp(46px,8vw,104px)}
+.head h1 .script{display:block;font-size:.62em;margin-top:.1em;text-transform:none}
+.intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5vw,70px);align-items:end}
+.intro p{color:var(--muted);max-width:46ch;margin:0;font-size:17px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(28px,4vw,44px)}
+.facts div{background:var(--ink);padding:18px 20px}
+.facts b{display:block;font-family:var(--f-display);font-size:clamp(30px,4vw,44px);font-weight:500;line-height:1;color:var(--ivory);font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--muted)}
+
+/* Filtros */
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding-block:28px 8px}
+.filters button{font:inherit;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ivory);background:transparent;border:1px solid var(--line);border-radius:40px;padding:8px 16px;cursor:pointer}
+.filters button:hover{border-color:var(--gold)}
+.filters button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+/* Fichas */
+.list{display:flex;flex-direction:column;padding-block:12px 40px}
+.p{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,4vw,52px);align-items:center;padding-block:clamp(28px,4vw,48px);border-bottom:1px solid var(--line)}
+.p:nth-child(even) .shot{order:2}
+.shot{display:block;aspect-ratio:16/10;overflow:hidden;border-radius:6px;border:1px solid var(--line);background:var(--ink-2)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .7s ease}
+.shot:hover img{transform:scale(1.03)}
+.txt{min-width:0;display:flex;flex-direction:column;gap:12px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.p h2{font-size:clamp(30px,3.6vw,46px)}
+.p p{margin:0;color:var(--muted);max-width:52ch}
+.p p strong{color:var(--ivory);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:2px 0 0;padding:0}
+.tags li{font-size:12.5px;border:1px solid var(--line);border-radius:30px;padding:5px 11px;color:var(--ivory)}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:6px}
+.go{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;color:var(--ink);background:var(--gold);padding:10px 16px;border-radius:4px}
+.go:hover{background:var(--gold-light)}
+.go svg{width:16px;height:16px}
+.url{font-size:13px;color:var(--muted);text-decoration:none;word-break:break-all}
+.url:hover{color:var(--ivory)}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);border:1px solid var(--line);border-radius:30px;padding:3px 10px}
+.st::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--live)}
+.st.soon::before{background:var(--gold)}
+
+/* Servicios y contacto */
+.close{border-top:1px solid var(--line);padding-block:clamp(40px,6vw,72px)}
+.close h2{font-size:clamp(32px,4.4vw,56px);margin-bottom:24px}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc div{background:var(--ink);padding:20px}
+.svc b{display:block;font-family:var(--f-display);font-weight:500;font-size:20px;text-transform:uppercase;margin-bottom:6px}
+.svc span{font-size:14px;color:var(--muted)}
+.contact{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px;font-size:15px}
+.contact span{color:var(--muted)}
+.contact b{color:var(--ivory);font-weight:600;user-select:all}
+footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+@media (max-width:860px){
+  .intro,.p{grid-template-columns:minmax(0,1fr)}
+  .p:nth-child(even) .shot{order:0}
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .svc{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}}
+</style>
+</head>
+<body>
+
+
+<header class="head">
+  <div class="wrap">
+    <div class="brand">
+      <img src="../assets/logo-krea-oscuro.webp" alt="KREA Digital Studio" width="520" height="146">
+      <span class="date">Sevilla · Octubre de 2026</span>
+    </div>
+    <div class="intro">
+      <h1>Portafolio <span class="script">de proyectos publicados.</span></h1>
+      <p>Webs, apps a medida, marca y agentes de IA para empresas, comercios y profesionales. Cada proyecto está online: abre el enlace y compruébalo en tu móvil.</p>
+    </div>
+    <div class="facts">
+      <div><b>8</b><span>proyectos online</span></div>
+      <div><b>5</b><span>apps a medida y producto propio</span></div>
+      <div><b>7</b><span>webs con dominio propio</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="filters" role="group" aria-label="Filtrar proyectos">
+    <button type="button" data-f="todo" aria-pressed="true">Todos</button>
+    <button type="button" data-f="app" aria-pressed="false">Apps</button>
+    <button type="button" data-f="web" aria-pressed="false">Webs</button>
+    <button type="button" data-f="marca" aria-pressed="false">Marca</button>
+  </div>
+
+  <div class="list" id="list">
+    <article class="p" data-k="app">
+      <a class="shot" href="https://sgm.kreadigitalstudio.es/portafolio/" target="_blank" rel="noopener"><img src="../assets/p-sgm-2026.webp" alt="SGM Presupuestos en ordenador y móvil, y SGM Fichajes" width="1600" height="1000"></a>
+      <div class="txt">
+        <div class="meta"><span>Construcción y reformas · Sevilla</span><span class="st">Online</span></div>
+        <h2>Construcciones SGM</h2>
+        <p>Dos apps a medida para la empresa de Sergio. <strong>SGM Presupuestos</strong>: presupuestos por partidas con asistente, PDF, facturas, clientes, obras y gastos, con los datos en la nube entre móvil y ordenador. <strong>SGM Fichajes</strong>: control de obra con fichaje por código, zona de la obra, asistencia e incidencias.</p>
+        <ul class="tags"><li>App de gestión</li><li>Presupuestos y facturas</li><li>Fichajes</li><li>Datos en la nube</li></ul>
+        <div class="links"><a class="go" href="https://sgm.kreadigitalstudio.es/portafolio/" target="_blank" rel="noopener">Ver caso de estudio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a class="url" href="https://sgm.kreadigitalstudio.es/sgm-fichajes/" target="_blank" rel="noopener">Demo de fichajes</a></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="app">
+      <a class="shot" href="https://aire.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-aire.webp" alt="Pantallas de Aire: contador, SOS de respiración y hitos de salud" width="1600" height="1000"></a>
+      <div class="txt">
+        <div class="meta"><span>Producto propio de KREA · Salud</span><span class="st">Online</span></div>
+        <h2>Aire · Deja de fumar</h2>
+        <p>Nuestra app para dejar de fumar, un día cada vez. Contador en vivo, dinero ahorrado, hitos de salud y un <strong>SOS de respiración guiada</strong> de 3 minutos para cada antojo. Se instala en el móvil sin tienda, con web de venta, prueba gratuita y pago único.</p>
+        <ul class="tags"><li>App instalable</li><li>Web de venta</li><li>Licencias y pagos</li><li>Modo claro y oscuro</li></ul>
+        <div class="links"><a class="go" href="https://aire.kreadigitalstudio.es/" target="_blank" rel="noopener">Abrir Aire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">aire.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web app">
+      <a class="shot" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-adanero.webp" alt="App de entrenamiento de David Adanero" width="960" height="674"></a>
+      <div class="txt">
+        <div class="meta"><span>Entrenamiento personal</span><span class="st">Online</span></div>
+        <h2>David Adanero</h2>
+        <p>Web y app para un entrenador personal: planes, seguimiento de sus clientes y panel diario para organizar los entrenamientos desde el móvil.</p>
+        <ul class="tags"><li>Web</li><li>App de clientes</li><li>Seguimiento</li></ul>
+        <div class="links"><a class="go" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">david-adanero.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web app">
+      <a class="shot" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" width="960" height="600"></a>
+      <div class="txt">
+        <div class="meta"><span>Tecnificación deportiva · Sevilla</span><span class="st">Online</span></div>
+        <h2>JP Fútbol</h2>
+        <p>Web y app para una academia de tecnificación de fútbol: entrenamientos por grupos, porteros y preparación física, con la app para organizar la academia.</p>
+        <ul class="tags"><li>Web</li><li>App de academia</li><li>Reservas</li></ul>
+        <div class="links"><a class="go" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">jpfutbol-web.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web marca">
+      <a class="shot" href="https://velvet.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" width="960" height="600"></a>
+      <div class="txt">
+        <div class="meta"><span>Atelier de maquillaje</span><span class="st">Online</span></div>
+        <h2>Velvet Contour</h2>
+        <p>Marca y web para un atelier de maquillaje a domicilio: logotipo y sellos, fotografía de portada, técnicas, marcas de trabajo y asistente de consultas con paso a WhatsApp.</p>
+        <ul class="tags"><li>Logo y sellos</li><li>Web</li><li>Asistente de consultas</li></ul>
+        <div class="links"><a class="go" href="https://velvet.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">velvet.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web">
+      <a class="shot" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" width="960" height="674"></a>
+      <div class="txt">
+        <div class="meta"><span>Estudio de tatuaje · Andorra</span><span class="st">Online</span></div>
+        <h2>Crazy Circus Tattoo</h2>
+        <p>Web con identidad de circo para un estudio de tatuaje: artistas, estilos, galería y petición de cita, con una estética que se reconoce al primer vistazo.</p>
+        <ul class="tags"><li>Web</li><li>Galería</li><li>Citas</li></ul>
+        <div class="links"><a class="go" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">crazycircus.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web">
+      <a class="shot" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" width="960" height="600"></a>
+      <div class="txt">
+        <div class="meta"><span>Tatuaje · Triana, Sevilla</span><span class="st">Online</span></div>
+        <h2>Rober Ruiz Tattoo</h2>
+        <p>Portfolio para un tatuador de Triana: trabajos, estilo personal y contacto directo para pedir cita.</p>
+        <ul class="tags"><li>Web portfolio</li><li>Contacto</li></ul>
+        <div class="links"><a class="go" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">roberruiz.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="web">
+      <a class="shot" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-murias.webp" alt="Web de David Murias, filósofo y escritor" width="960" height="674"></a>
+      <div class="txt">
+        <div class="meta"><span>Filosofía y divulgación</span><span class="st">Online</span></div>
+        <h2>David Murias</h2>
+        <p>Web de marca personal para un filósofo y escritor: su enfoque, sus encuentros y su contenido, con un tono sereno y editorial.</p>
+        <ul class="tags"><li>Marca personal</li><li>Web</li></ul>
+        <div class="links"><a class="go" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">david-murias.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow">Qué hacemos</p>
+    <h2>Un mismo estudio <span class="script">para todo lo digital.</span></h2>
+    <div class="svc">
+      <div><b>Agentes de IA</b><span>Atienden WhatsApp, Instagram, correo y teléfono, y agendan citas 24/7.</span></div>
+      <div><b>Apps a medida</b><span>Presupuestos, fichajes, clientes, citas o entrenamientos desde el móvil.</span></div>
+      <div><b>Webs</b><span>Rápidas, pensadas para el móvil y preparadas para captar clientes.</span></div>
+      <div><b>Marca</b><span>Logos, sellos, identidad y piezas para redes.</span></div>
+    </div>
+    <div class="contact">
+      <span>WhatsApp <b>653 807 314</b></span>
+      <span>Correo <b>contacto@kreadigitalstudio.es</b></span>
+      <span>Instagram <b>@kreadigitalstudio.es</b></span>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">KREA Digital Studio · Agencia de IA · Sevilla · Proyectos publicados a octubre de 2026</div></footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'), items=document.querySelectorAll('#list .p');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    var f=b.dataset.f;
+    items.forEach(function(p){p.hidden=!(f==='todo'||p.dataset.k.split(' ').indexOf(f)>-1)});
+  })});
+})();
+</script>
+
+</body>
+</html>
