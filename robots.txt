@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /configurar-ia.php
+
+Sitemap: https://kreadigitalstudio.es/sitemap.xml

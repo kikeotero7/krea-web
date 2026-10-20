@@ -19,6 +19,12 @@ if (is_readable($rlFile)) { $hits = array_filter(explode(',', file_get_contents(
 if (count($hits) >= 30) { echo json_encode(['ok'=>false,'error'=>'limite']); exit; }
 $hits[] = $now; @file_put_contents($rlFile, implode(',', $hits));
 
+// Tope diario de toda la web (controla el gasto): al llegar, la web sigue con respuestas guardadas y WhatsApp
+$diaFile = $rlDir . '/dia-' . date('Y-m-d');
+$hoy = is_readable($diaFile) ? (int)file_get_contents($diaFile) : 0;
+if ($hoy >= 400) { echo json_encode(['ok'=>false,'error'=>'tope_diario']); exit; }
+@file_put_contents($diaFile, (string)($hoy + 1));
+
 $in = json_decode(file_get_contents('php://input'), true);
 $msgs = [];
 foreach (array_slice($in['messages'] ?? [], -12) as $m) {
@@ -58,8 +64,10 @@ PACKS DE AGENTES (precios orientativos, sin IVA; el precio final se cierra tras 
 CÓMO TRABAJAMOS
 1. Auditoría IA gratuita (20 min por videollamada). 2. Diseño del agente. 3. Conexión y pruebas con el cliente. 4. Lanzamiento y mejora cada mes. Nada se activa sin el visto bueno del cliente. Trabajamos según el RGPD.
 
-PROYECTOS REALES
-Construcciones SGM (apps de presupuestos y fichajes), Crazy Circus Tattoo, David Adanero (web y app de entrenamiento), Velvet Contour (maquillaje), Rober Ruiz Tattoo, JP Fútbol (web y app de academia) y David Murias (filósofo).
+PROYECTOS REALES (se ven en la sección «Proyectos» de la web)
+- Construcciones SGM (reformas, Sevilla): dos apps a medida. SGM Presupuestos: presupuestos por partidas con asistente, PDF, facturas, clientes, obras y gastos, sincronizado entre móvil y ordenador. SGM Fichajes: control de obra con fichaje por código, zona de obra, asistencia e incidencias. Caso de estudio: sgm.kreadigitalstudio.es/portafolio
+- Aire (producto propio de KREA): app para dejar de fumar con contador en vivo, dinero ahorrado, hitos de salud y SOS de respiración guiada. aire.kreadigitalstudio.es
+- Webs y apps: Crazy Circus Tattoo, David Adanero (web y app de entrenamiento), Velvet Contour (maquillaje), Rober Ruiz Tattoo, JP Fútbol (web y app de academia) y David Murias (filósofo).
 
 CONTACTO
 WhatsApp 653 807 314 · contacto@kreadigitalstudio.es · Instagram @kreadigitalstudio.es · Sevilla, trabajamos con toda España.
@@ -70,6 +78,9 @@ TXT;
 $payload = json_encode([
   'model' => 'claude-haiku-5-5',
   'max_tokens' => 350,
+  // sin razonamiento extra y esfuerzo bajo: respuestas cortas y el mínimo gasto
+  'thinking' => ['type' => 'disabled'],
+  'output_config' => ['effort' => 'low'],
   'system' => $system,
   'messages' => $msgs,
 ]);
@@ -91,7 +102,9 @@ $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 $data = json_decode((string)$res, true);
-if ($code !== 200 || empty($data['content'][0]['text'])) { echo json_encode(['ok'=>false,'error'=>'api','code'=>$code]); exit; }
-$reply = trim($data['content'][0]['text']);
+$reply = '';
+foreach (($data['content'] ?? []) as $b) { if (($b['type'] ?? '') === 'text') $reply .= $b['text']; }
+$reply = trim($reply);
+if ($code !== 200 || ($data['stop_reason'] ?? '') === 'refusal' || $reply === '') { echo json_encode(['ok'=>false,'error'=>'api','code'=>$code]); exit; }
 $handoff = (bool)preg_match('/whatsapp|auditor[ií]a|equipo|llamada/i', $reply);
 echo json_encode(['ok'=>true, 'reply'=>$reply, 'handoff'=>$handoff]);
