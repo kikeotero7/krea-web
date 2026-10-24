@@ -101,7 +101,7 @@ paginas.append(f"""<section class="page marca">
 <div class="cv"><p class="eyebrow">Marca personal y corporativa</p><h1 class="small">Identidades<span class="script">que se reconocen.</span></h1></div>
 <div class="mgrid">
 <figure><div class="shot"><img src="file://{ASSETS}/marca-velvet.webp" alt=""></div><figcaption><b>Velvet Contour</b><span>Marca corporativa · logotipo, tres sellos y paleta cobre, chocolate y crema</span></figcaption></figure>
-<figure><div class="shot"><img src="file://{ASSETS}/marca-murias.webp" alt=""></div><figcaption><b>David Murias</b><span>Marca personal · monograma DM, nombre, lema, retrato, paleta y tipografía editorial</span></figcaption></figure>
+<figure><div class="shot"><img src="file://{ASSETS}/marca-murias.webp" alt=""></div><figcaption><b>David Murias</b><span>Marca personal · emblema DM, nombre, lema, retrato, paleta y tipografía editorial</span></figcaption></figure>
 </div>
 <div class="foot"><span>© 2026 KREA Digital Studio · Portafolio</span><span>{N + 2}</span></div>
 </section>""")
