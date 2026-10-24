@@ -97,6 +97,14 @@ for i, (img, meta, nombre, tipo, frase, bloques, etiquetas, url, estado) in enum
 <p class="url"><span class="st{cls}">{e(estado)}</span>Demostración privada bajo petición</p></div>
 <div class="foot"><span>© 2026 KREA Digital Studio · Portafolio</span><span>{i + 2}</span></div>
 </section>""")
+paginas.append(f"""<section class="page marca">
+<div class="cv"><p class="eyebrow">Marca personal y corporativa</p><h1 class="small">Identidades<span class="script">que se reconocen.</span></h1></div>
+<div class="mgrid">
+<figure><div class="shot"><img src="file://{ASSETS}/marca-velvet.webp" alt=""></div><figcaption><b>Velvet Contour</b><span>Marca corporativa · logotipo, tres sellos y paleta cobre, chocolate y crema</span></figcaption></figure>
+<figure><div class="shot"><img src="file://{ASSETS}/marca-murias.webp" alt=""></div><figcaption><b>David Murias</b><span>Marca personal · nombre, lema, retrato, paleta y tipografía editorial</span></figcaption></figure>
+</div>
+<div class="foot"><span>© 2026 KREA Digital Studio · Portafolio</span><span>{N + 2}</span></div>
+</section>""")
 paginas.append(f"""<section class="page end">
 <img class="logo" src="file://{ASSETS}/logo-krea-oscuro.webp" alt="">
 <div class="cv"><p class="eyebrow">Qué hacemos</p><h1 class="small">Un mismo estudio<span class="script">para todo lo digital.</span></h1></div>
@@ -111,7 +119,7 @@ paginas.append(f"""<section class="page end">
 <div><span>Instagram</span><b>@kreadigitalstudio.es</b></div>
 <div><span>Web</span><b><a href="https://kreadigitalstudio.es">kreadigitalstudio.es</a></b></div></div>
 <p class="legal">© 2026 KREA Digital Studio. Diseño, textos, capturas e imágenes protegidos. Prohibida su copia o reproducción, total o parcial, sin autorización por escrito.</p>
-<div class="foot"><span>Auditoría IA gratuita · 20 minutos por videollamada</span><span>{N + 2}</span></div>
+<div class="foot"><span>Auditoría IA gratuita · 20 minutos por videollamada</span><span>{N + 3}</span></div>
 </section>""")
 
 css = f"""
@@ -168,6 +176,12 @@ h1,h2{{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;li
 .contact{{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;margin-top:12mm}}
 .contact span{{display:block;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}}
 .contact b{{font-size:11pt;font-weight:600}}
+.marca h1.small{{font-size:34pt;margin-top:3mm}}
+.mgrid{{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:9mm}}
+.mgrid figure{{margin:0}}
+.mgrid figcaption{{margin-top:3mm;display:flex;flex-direction:column}}
+.mgrid figcaption b{{font-family:Oswald,sans-serif;font-weight:500;text-transform:uppercase;font-size:13pt}}
+.mgrid figcaption span{{font-size:8.5pt;color:var(--muted)}}
 .legal{{margin-top:12mm;font-size:8pt;color:var(--muted);max-width:200mm}}
 """
 salida = pathlib.Path(__file__).resolve().parent / "KREA-Portafolio.html"

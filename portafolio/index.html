@@ -76,6 +76,15 @@ h1,h2,h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;l
 .st.soon::before{background:var(--gold)}
 img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 
+.brand{border-top:1px solid var(--line);padding-block:clamp(40px,6vw,72px)}
+.brand h2{font-size:clamp(32px,4.4vw,56px);margin:10px 0 12px}
+.brand .b-lead{color:var(--muted);max-width:56ch;margin:0 0 28px}
+.b-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,32px)}
+.b-card{margin:0;display:flex;flex-direction:column;gap:12px}
+.b-card figcaption{display:flex;flex-direction:column;gap:2px}
+.b-card figcaption b{font-family:var(--f-display);font-weight:600;font-size:22px;text-transform:uppercase}
+.b-card figcaption span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.b-grid{grid-template-columns:minmax(0,1fr)}}
 /* Servicios y contacto */
 .close{border-top:1px solid var(--line);padding-block:clamp(40px,6vw,72px)}
 .close h2{font-size:clamp(32px,4.4vw,56px);margin-bottom:24px}
@@ -220,7 +229,7 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       </div>
     </article>
 
-    <article class="p" data-k="web">
+    <article class="p" data-k="web marca">
       <div class="shot"><img src="../assets/p-murias.webp" alt="Web de David Murias, filósofo y escritor" width="960" height="674"></div>
       <div class="txt">
         <div class="meta"><span>Filosofía práctica · Andorra</span><span class="st">Online</span></div>
@@ -232,6 +241,18 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
   </div>
 </main>
 
+
+<section class="brand">
+  <div class="wrap">
+    <p class="eyebrow">Marca personal y corporativa</p>
+    <h2>Identidades <span class="script">que se reconocen.</span></h2>
+    <p class="b-lead">Logotipo, sellos, paleta y tipografía, aplicados después a la web, las redes y cada pieza del cliente.</p>
+    <div class="b-grid">
+      <figure class="b-card"><div class="shot"><img src="../assets/marca-velvet.webp" alt="Identidad de Velvet Contour: logotipo, sellos y paleta en cobre y chocolate" width="1600" height="1000"></div><figcaption><b>Velvet Contour</b><span>Marca corporativa · logotipo, tres sellos y paleta cobre, chocolate y crema</span></figcaption></figure>
+      <figure class="b-card"><div class="shot"><img src="../assets/marca-murias.webp" alt="Marca personal de David Murias: nombre, lema, retrato, paleta y tipografía" width="1600" height="1000"></div><figcaption><b>David Murias</b><span>Marca personal · nombre, lema «Pensar la vida para vivirla», retrato, paleta y tipografía editorial</span></figcaption></figure>
+    </div>
+  </div>
+</section>
 <section class="close">
   <div class="wrap">
     <p class="eyebrow">Qué hacemos</p>
