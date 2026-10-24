@@ -334,6 +334,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .works-apps{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line-dark)}
 .works-apps .shot{aspect-ratio:16/10}
 .works-apps .shot img{object-position:center}
+.works.webs5{grid-template-columns:repeat(6,minmax(0,1fr))}
+.works.webs5 .work{grid-column:span 2}
+.works.webs5 .work:nth-child(n+4){grid-column:span 3}
+@media (max-width:1080px){.works.webs5{grid-template-columns:repeat(2,minmax(0,1fr))}.works.webs5 .work,.works.webs5 .work:nth-child(n+4){grid-column:auto}.works.webs5 .work:last-child{grid-column:1/-1}}
+@media (max-width:560px){.works.webs5{grid-template-columns:minmax(0,1fr)}}
 .work .w-desc{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted-dark);max-width:52ch}
 @media (max-width:860px){.works-apps{grid-template-columns:minmax(0,1fr)}}
 
@@ -974,13 +979,14 @@ dialog p{font-size:14px;color:var(--muted-light)}
     <div class="works works-apps">
       <div class="work rv"><div class="shot"><img src="assets/p-gastobra.webp" alt="Pantallas de Gastobra: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Facturas con IA</small><b>Gastobra</b><p class="w-desc">Foto a la factura, la IA la lee y reparte cada producto por carpetas. Relación de gastos e IVA trimestral en PDF para el cliente y el gestor.</p></div><span class="st live">Online</span></div></div>
       <div class="work rv"><div class="shot"><img src="assets/p-gastoticket.webp" alt="Pantallas de Gastoticket: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Gastos del día a día</small><b>Gastoticket</b><p class="w-desc">Haz una foto al ticket y sabrás cuánto gastas cada mes en casa, coche, compras o salud. Con voz y PDF de gastos.</p></div><span class="st">Próximamente</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-jpfutbol-app.webp" alt="App de JP Fútbol en ordenador y móvil: el día de entrenamiento y los jugadores" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Academia de fútbol · App a medida</small><b>JP Fútbol · App</b><p class="w-desc">App para el equipo técnico y las familias: grupos del día, asistencia, plan de cada sesión, fichas de jugadores, avisos y packs y pagos.</p></div><span class="st">En presentación</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-adanero.webp" alt="App de David Adanero en ordenador y móvil: resumen del día y clientes" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Entrenamiento personal · App a medida</small><b>David Adanero · App</b><p class="w-desc">Su espacio de trabajo: cómo llega cada cliente, agenda, sesiones, planes, progreso, readaptación, informes y cobros, con vista para sus clientes.</p></div><span class="st live">Online</span></div></div>
     </div>
-    <div class="works">
+    <div class="works webs5">
       <div class="work rv"><div class="shot"><img src="assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></div>
-      <div class="work rv"><div class="shot"><img src="assets/p-adanero.webp" alt="Web de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></div>
       <div class="work rv"><div class="shot"><img src="assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" loading="lazy"></div><div class="meta"><div><small>Atelier de maquillaje · Marca y web</small><b>Velvet Contour</b></div><span class="st live">Online</span></div></div>
       <div class="work rv"><div class="shot"><img src="assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Tatuaje · Triana, Sevilla</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></div>
-      <div class="work rv"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st">En presentación</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web</small><b>JP Fútbol · Web</b></div><span class="st">En presentación</span></div></div>
       <div class="work rv"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo" loading="lazy"></div><div class="meta"><div><small>Filosofía práctica · Andorra</small><b>David Murias</b></div><span class="st live">Online</span></div></div>
     </div>
   </div>

@@ -69,7 +69,7 @@ PROYECTOS REALES (en la sección «Proyectos» de la web solo se ven sus imágen
 - Aire (producto propio de KREA): app para dejar de fumar con contador en vivo, dinero ahorrado, hitos de salud y SOS de respiración guiada.
 - Gastobra (producto propio de KREA): app con IA para facturas y tickets de compra. Foto a la factura, la IA la lee y reparte cada producto por carpetas (casa, negocio, clientes, obras); saca la relación de gastos en PDF para el cliente y la trimestral con IVA para el gestor.
 - Gastoticket (producto propio de KREA, próximamente): la versión para los gastos del día a día de cualquier persona (casa, coche, compras, salud), con resumen mensual, voz y PDF. Todavía no está abierta al público; si preguntan, di que saldrá pronto y que pueden pedir información por WhatsApp.
-- Webs y apps de clientes: Crazy Circus Tattoo, David Adanero (web y app de entrenamiento), Velvet Contour (maquillaje), Rober Ruiz Tattoo, JP Fútbol (web y app de academia) y David Murias (filósofo).
+- Webs y apps de clientes: Crazy Circus Tattoo, David Adanero (web y app de entrenamiento), Velvet Contour (maquillaje), Rober Ruiz Tattoo, JP Fútbol (app para el equipo técnico y las familias, y web de la academia) y David Murias (filósofo).
 
 CONTACTO
 WhatsApp 653 807 314 · contacto@kreadigitalstudio.es · Instagram @kreadigitalstudio.es · Sevilla, trabajamos con toda España.
