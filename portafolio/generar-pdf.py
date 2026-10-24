@@ -12,7 +12,8 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 ASSETS = RAIZ / "assets"
 FUENTES = pathlib.Path(sys.argv[1]).resolve()
 
-# (imagen, sector, nombre, tipo, frase, bloques, etiquetas, dirección, estado)
+# (imagen, sector, nombre, tipo, frase, bloques, etiquetas, dirección interna, estado)
+# Las direcciones de los proyectos no se publican en el PDF: los enlaces son privados.
 PROYECTOS = [
     ("p-sgm-2026.webp", "Construcción y reformas · Sevilla", "Construcciones SGM", "App a medida",
      "Dos aplicaciones a medida que organizan la empresa de Sergio.",
@@ -35,11 +36,11 @@ PROYECTOS = [
      [("Una foto al ticket", "La IA lo lee y lo reparte entre Casa, Coche, Compras o Salud."),
       ("Cuánto gastas", "Resumen de cada mes frente al anterior, en qué tipo de cosas y PDF de gastos.")],
      ["Lectura con IA", "Resumen mensual", "Voz", "PDF"], "En prueba privada · lanzamiento en 2027", "Próximamente"),
-    ("p-adanero.webp", "Entrenamiento personal", "David Adanero", "Web y app",
-     "Web y app para un entrenador personal, preparador físico y readaptador.",
-     [("Web", "Servicios, grupos, método, readaptación y reserva de cita."),
-      ("App", "Planificación y seguimiento de sus clientes.")],
-     ["Web", "App de clientes", "Reservas"], "david-adanero.kreadigitalstudio.es", "Online"),
+    ("p-adanero.webp", "Entrenamiento personal", "David Adanero", "App y web",
+     "App y web para un entrenador personal, preparador físico y readaptador.",
+     [("App", "Su espacio de trabajo: resumen del día con cómo llega cada cliente, agenda, sesiones, planes, progreso, readaptación, informes y cobros, con vista para sus clientes."),
+      ("Web", "Servicios, grupos, método y reserva de cita.")],
+     ["App de gestión", "Clientes y planes", "Agenda y cobros", "Web"], "david-adanero.kreadigitalstudio.es", "Online"),
     ("p-jpfutbol.webp", "Tecnificación deportiva · Sevilla", "JP Fútbol", "Web y app",
      "Web y app para una academia de tecnificación de fútbol.",
      [("Academia", "Técnica, preparación física y porteros en grupos reducidos, con una app para organizar la academia."),
@@ -93,7 +94,7 @@ for i, (img, meta, nombre, tipo, frase, bloques, etiquetas, url, estado) in enum
 <div class="txt"><p class="num">{i + 1:02d} <em>/ {N:02d}</em></p>
 <p class="eyebrow">{e(meta)}</p><h2>{e(nombre)}</h2><p class="kind">{e(tipo)}</p>
 <p class="lead">{e(frase)}</p>{bl}<div class="tags">{tg}</div>
-<p class="url"><span class="st{cls}">{e(estado)}</span>{enlace(url)}</p></div>
+<p class="url"><span class="st{cls}">{e(estado)}</span>Demostración privada bajo petición</p></div>
 <div class="foot"><span>© 2026 KREA Digital Studio · Portafolio</span><span>{i + 2}</span></div>
 </section>""")
 paginas.append(f"""<section class="page end">

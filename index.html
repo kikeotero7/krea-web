@@ -304,7 +304,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .svc span{color:var(--muted-light);font-size:15px}
 
 /* ---------- Portfolio ---------- */
-.feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,50px);align-items:center;text-decoration:none;margin-bottom:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line-dark)}
+.feature{cursor:default;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,50px);align-items:center;text-decoration:none;margin-bottom:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line-dark)}
 .feature .shot{aspect-ratio:16/10;overflow:hidden;border-radius:var(--r);border:1px solid var(--line-dark)}
 .feature .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .feature:hover .shot img{transform:scale(1.03)}
@@ -320,6 +320,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .f-txt .st.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#5fd37c;margin-right:6px;vertical-align:1px}
 .works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .work{text-decoration:none;display:flex;flex-direction:column;gap:14px}
+.work{cursor:default}
 .work .shot{aspect-ratio:16/10.5;overflow:hidden;border-radius:var(--r);border:1px solid var(--line-dark);background:var(--ink-2)}
 .work .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s ease}
 .work:hover .shot img{transform:scale(1.04)}
@@ -948,39 +949,39 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <p class="eyebrow"><b>06</b> Trabajo seleccionado</p>
         <h2>Proyectos con <span class="script">identidad propia.</span></h2>
       </div>
-      <p class="lead">Webs y apps publicadas para empresas y profesionales reales. Ábrelas y compruébalo en tu móvil.</p>
+      <p class="lead">Webs y apps publicadas para empresas y profesionales reales. Pídenos una demostración y te las enseñamos por videollamada.</p>
     </div>
-    <a class="feature rv" href="https://sgm.kreadigitalstudio.es/portafolio/" target="_blank" rel="noopener">
+    <div class="feature rv">
       <div class="shot"><img src="assets/p-sgm-2026.webp" alt="App SGM Presupuestos en ordenador y móvil, y SGM Fichajes para el control de obra" loading="lazy" width="1600" height="1000"></div>
       <div class="f-txt">
         <small>Construcción y reformas · Sevilla · App a medida</small>
         <b>Construcciones SGM</b>
         <p>Dos aplicaciones que organizan la empresa de Sergio. <strong>SGM Presupuestos</strong>: presupuestos por partidas con asistente, facturas, clientes, obras y gastos, con los datos sincronizados entre móvil y ordenador. <strong>SGM Fichajes</strong>: control de obra con fichaje por código, zona de la obra, asistencia e incidencias.</p>
         <ul><li>Presupuesto listo para enviar en minutos, con PDF</li><li>Facturas, cobros pendientes y gastos del mes</li><li>Fichajes de empleados por obra</li></ul>
-        <span class="st live">Online · ver caso de estudio</span>
+        <span class="st live">Online</span>
       </div>
-    </a>
-    <a class="feature feature-rev rv" href="https://aire.kreadigitalstudio.es/" target="_blank" rel="noopener">
+    </div>
+    <div class="feature feature-rev rv">
       <div class="shot"><img src="assets/p-aire.webp" alt="Pantallas de Aire, la app para dejar de fumar: contador, SOS de respiración y hitos de salud" loading="lazy" width="1600" height="1000"></div>
       <div class="f-txt">
         <small>Producto propio de KREA · App instalable</small>
         <b>Aire · Deja de fumar</b>
         <p>Nuestra app para dejar de fumar, un día cada vez. Contador en vivo, dinero ahorrado, hitos de salud y un <strong>SOS de respiración guiada</strong> para cada antojo. Con web de venta, pago único y licencias.</p>
         <ul><li>Funciona en el móvil como una app, sin tienda</li><li>Modo claro y oscuro, diario y metas</li><li>Venta online con prueba gratuita</li></ul>
-        <span class="st live">Online · probar Aire</span>
+        <span class="st live">Online</span>
       </div>
-    </a>
+    </div>
     <div class="works works-apps">
-      <a class="work rv" href="https://gastobra.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-gastobra.webp" alt="Pantallas de Gastobra: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Facturas con IA</small><b>Gastobra</b><p class="w-desc">Foto a la factura, la IA la lee y reparte cada producto por carpetas. Relación de gastos e IVA trimestral en PDF para el cliente y el gestor.</p></div><span class="st live">Online</span></div></a>
+      <div class="work rv"><div class="shot"><img src="assets/p-gastobra.webp" alt="Pantallas de Gastobra: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Facturas con IA</small><b>Gastobra</b><p class="w-desc">Foto a la factura, la IA la lee y reparte cada producto por carpetas. Relación de gastos e IVA trimestral en PDF para el cliente y el gestor.</p></div><span class="st live">Online</span></div></div>
       <div class="work rv"><div class="shot"><img src="assets/p-gastoticket.webp" alt="Pantallas de Gastoticket: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Gastos del día a día</small><b>Gastoticket</b><p class="w-desc">Haz una foto al ticket y sabrás cuánto gastas cada mes en casa, coche, compras o salud. Con voz y PDF de gastos.</p></div><span class="st">Próximamente</span></div></div>
     </div>
     <div class="works">
-      <a class="work rv" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-adanero.webp" alt="Web de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://velvet.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" loading="lazy"></div><div class="meta"><div><small>Atelier de maquillaje · Marca y web</small><b>Velvet Contour</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Tatuaje · Triana, Sevilla</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st">En presentación</span></div></a>
-      <a class="work rv" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo" loading="lazy"></div><div class="meta"><div><small>Filosofía práctica · Andorra</small><b>David Murias</b></div><span class="st live">Online</span></div></a>
+      <div class="work rv"><div class="shot"><img src="assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-adanero.webp" alt="Web de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" loading="lazy"></div><div class="meta"><div><small>Atelier de maquillaje · Marca y web</small><b>Velvet Contour</b></div><span class="st live">Online</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Tatuaje · Triana, Sevilla</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st">En presentación</span></div></div>
+      <div class="work rv"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo" loading="lazy"></div><div class="meta"><div><small>Filosofía práctica · Andorra</small><b>David Murias</b></div><span class="st live">Online</span></div></div>
     </div>
   </div>
 </section>
@@ -1312,9 +1313,9 @@ dialog p{font-size:14px;color:var(--muted-light)}
     [/c[oó]mo funciona|qu[eé] es un agente|chatbot|robot/i,'Un agente de IA es como un empleado digital: entiende lo que escribe tu cliente, responde con la información de tu negocio, agenda citas, guarda los datos y avisa a tu equipo. Si no sabe algo, pasa la conversación a una persona.'],
     [/cl[ií]nica|dental|m[eé]dic|fisio/i,'Para clínicas el agente confirma y recuerda citas, responde dudas de tratamientos y precios y reduce las citas a las que nadie acude.'],
     [/inmobiliar|piso|alquiler|vivienda/i,'Para inmobiliarias el agente responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores. Tienes un ejemplo real en la portada.'],
-    [/reforma|obra|construc|sgm/i,'Para reformas y construcción el agente recoge fotos y medidas, agenda visitas técnicas y prepara los datos del presupuesto. Hicimos las apps de Construcciones SGM: presupuestos y facturas con asistente, y fichajes de obra. Lo tienes en Proyectos 👇'],
+    [/reforma|obra|construc|sgm/i,'Para reformas y construcción el agente recoge fotos y medidas, agenda visitas técnicas y prepara los datos del presupuesto. Hicimos las apps de Construcciones SGM: presupuestos y facturas con asistente, y fichajes de obra. Tienes las imágenes en Proyectos 👇'],
     [/factura|ticket|gasto|gastobra|gastoticket/i,'Tenemos dos apps propias para ordenar gastos con IA: <b>Gastobra</b>, para facturas de obras, negocios y su IVA trimestral, y <b>Gastoticket</b> (próximamente), para los tickets del día a día. Haces una foto y la IA la lee y la reparte por carpetas.'],
-    [/fumar|tabaco|aire/i,'<b>Aire</b> es nuestra app para dejar de fumar: contador en vivo, dinero ahorrado, hitos de salud y un SOS de respiración guiada. La tienes en aire.kreadigitalstudio.es.'],
+    [/fumar|tabaco|aire/i,'<b>Aire</b> es nuestra app para dejar de fumar: contador en vivo, dinero ahorrado, hitos de salud y un SOS de respiración guiada. Si quieres verla, te la enseñamos en una demostración.'],
     [/d[oó]nde|sevilla|ubicaci|oficina/i,'Estamos en Sevilla y trabajamos con negocios de toda España por videollamada.'],
     [/contrato|permanencia/i,'Te lo explicamos todo por escrito antes de empezar: alcance, precio cerrado y condiciones. Nada se activa sin tu visto bueno.'],
     [/gracias/i,'¡A ti! Si quieres, te paso con el equipo por WhatsApp para seguir hablando.'],

@@ -64,10 +64,10 @@ PACKS DE AGENTES (precios orientativos, sin IVA; el precio final se cierra tras 
 CÓMO TRABAJAMOS
 1. Auditoría IA gratuita (20 min por videollamada). 2. Diseño del agente. 3. Conexión y pruebas con el cliente. 4. Lanzamiento y mejora cada mes. Nada se activa sin el visto bueno del cliente. Trabajamos según el RGPD.
 
-PROYECTOS REALES (se ven en la sección «Proyectos» de la web)
-- Construcciones SGM (reformas, Sevilla): dos apps a medida. SGM Presupuestos: presupuestos por partidas con asistente, PDF, facturas, clientes, obras y gastos, sincronizado entre móvil y ordenador. SGM Fichajes: control de obra con fichaje por código, zona de obra, asistencia e incidencias. Caso de estudio: sgm.kreadigitalstudio.es/portafolio
-- Aire (producto propio de KREA): app para dejar de fumar con contador en vivo, dinero ahorrado, hitos de salud y SOS de respiración guiada. aire.kreadigitalstudio.es
-- Gastobra (producto propio de KREA): app con IA para facturas y tickets de compra. Foto a la factura, la IA la lee y reparte cada producto por carpetas (casa, negocio, clientes, obras); saca la relación de gastos en PDF para el cliente y la trimestral con IVA para el gestor. gastobra.kreadigitalstudio.es
+PROYECTOS REALES (en la sección «Proyectos» de la web solo se ven sus imágenes; los enlaces son privados: nunca des direcciones de proyectos, ofrece una demostración por videollamada o WhatsApp)
+- Construcciones SGM (reformas, Sevilla): dos apps a medida. SGM Presupuestos: presupuestos por partidas con asistente, PDF, facturas, clientes, obras y gastos, sincronizado entre móvil y ordenador. SGM Fichajes: control de obra con fichaje por código, zona de obra, asistencia e incidencias.
+- Aire (producto propio de KREA): app para dejar de fumar con contador en vivo, dinero ahorrado, hitos de salud y SOS de respiración guiada.
+- Gastobra (producto propio de KREA): app con IA para facturas y tickets de compra. Foto a la factura, la IA la lee y reparte cada producto por carpetas (casa, negocio, clientes, obras); saca la relación de gastos en PDF para el cliente y la trimestral con IVA para el gestor.
 - Gastoticket (producto propio de KREA, próximamente): la versión para los gastos del día a día de cualquier persona (casa, coche, compras, salud), con resumen mensual, voz y PDF. Todavía no está abierta al público; si preguntan, di que saldrá pronto y que pueden pedir información por WhatsApp.
 - Webs y apps de clientes: Crazy Circus Tattoo, David Adanero (web y app de entrenamiento), Velvet Contour (maquillaje), Rober Ruiz Tattoo, JP Fútbol (web y app de academia) y David Murias (filósofo).
 

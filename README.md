@@ -54,4 +54,6 @@ La web se publica en el hosting de OVHcloud, en la carpeta del dominio principal
 
 ## Proyectos que aparecen en la web
 
-Construcciones SGM (`sgm.kreadigitalstudio.es/portafolio/`), Aire (`aire.kreadigitalstudio.es`), Gastobra (`gastobra.kreadigitalstudio.es`), Gastoticket (próximamente, sin enlace), Crazy Circus Tattoo, David Adanero, Velvet Contour, Rober Ruiz Tattoo, JP Fútbol y David Murias.
+Construcciones SGM, Aire, Gastobra, Gastoticket (próximamente), David Adanero (se muestra su app), JP Fútbol, Velvet Contour, Crazy Circus Tattoo, Rober Ruiz Tattoo y David Murias.
+
+**Solo imágenes:** en la web, en el portafolio y en su PDF los proyectos no llevan enlaces ni direcciones, y el agente KREA IA no las da. Quien quiera verlos pide una demostración.
