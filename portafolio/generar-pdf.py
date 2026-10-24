@@ -83,6 +83,7 @@ paginas.append(f"""<section class="page cover">
 <h1>Portafolio<span class="script">de proyectos.</span></h1>
 <p class="lead">Apps propias y a medida, webs, marca y agentes de IA para empresas, comercios y profesionales.</p></div>
 <ol class="index">{indice}</ol>
+<p class="online"><a href="https://kreadigitalstudio.es/portafolio/">Ver el portafolio online → kreadigitalstudio.es/portafolio</a></p>
 <div class="foot"><span>© 2026 KREA Digital Studio · Todos los derechos reservados</span><span>Octubre 2026</span></div>
 </section>""")
 for i, (img, meta, nombre, tipo, frase, bloques, etiquetas, url, estado) in enumerate(PROYECTOS):
@@ -114,10 +115,11 @@ paginas.append(f"""<section class="page end">
 <div><b>Webs</b><p>Rápidas, pensadas para el móvil y preparadas para captar clientes.</p></div>
 <div><b>Marca</b><p>Logos, sellos, identidad y piezas para redes.</p></div></div>
 <div class="contact">
-<div><span>WhatsApp</span><b>653 807 314</b></div>
-<div><span>Correo</span><b>contacto@kreadigitalstudio.es</b></div>
-<div><span>Instagram</span><b>@kreadigitalstudio.es</b></div>
-<div><span>Web</span><b><a href="https://kreadigitalstudio.es">kreadigitalstudio.es</a></b></div></div>
+<div><span>WhatsApp</span><b><a href="https://wa.me/34653807314">653 807 314</a></b></div>
+<div><span>Correo</span><b><a href="mailto:contacto@kreadigitalstudio.es">contacto@kreadigitalstudio.es</a></b></div>
+<div><span>Instagram</span><b><a href="https://www.instagram.com/kreadigitalstudio.es/">@kreadigitalstudio.es</a></b></div>
+<div><span>Web</span><b><a href="https://kreadigitalstudio.es">kreadigitalstudio.es</a></b></div>
+<div><span>Portafolio online</span><b><a href="https://kreadigitalstudio.es/portafolio/">kreadigitalstudio.es/portafolio</a></b></div></div>
 <p class="legal">© 2026 KREA Digital Studio. Diseño, textos, capturas e imágenes protegidos. Prohibida su copia o reproducción, total o parcial, sin autorización por escrito.</p>
 <div class="foot"><span>Auditoría IA gratuita · 20 minutos por videollamada</span><span>{N + 3}</span></div>
 </section>""")
@@ -173,7 +175,9 @@ h1,h2{{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;li
 .svc div{{background:var(--ink);padding:5mm}}
 .svc b{{font-family:Oswald,sans-serif;font-weight:500;text-transform:uppercase;font-size:13pt;display:block;margin-bottom:1.5mm}}
 .svc p{{color:var(--muted);font-size:9pt}}
-.contact{{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;margin-top:12mm}}
+.contact{{display:grid;grid-template-columns:repeat(5,auto);gap:6mm;margin-top:12mm}}
+.contact a,.online a{{color:inherit;text-decoration:none}}
+.online{{position:absolute;left:18mm;top:150mm;font-size:10.5pt;font-weight:700;color:var(--gold);border:1px solid var(--gold);border-radius:20mm;padding:3mm 6mm}}
 .contact span{{display:block;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}}
 .contact b{{font-size:11pt;font-weight:600}}
 .marca h1.small{{font-size:34pt;margin-top:3mm}}
