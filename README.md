@@ -28,12 +28,12 @@ Solo se paga cuando un visitante escribe en el chat. Límites incluidos:
 
 ## Publicar (hosting de OVH, igual que Gastobra y Gastoticket)
 
-La web se publica en el hosting de OVHcloud, en la carpeta del dominio principal (`www/`), con el botón de GitHub Actions. No se usa GitHub Pages: el repositorio es privado.
+La web se publica en el hosting de OVHcloud, en la carpeta `104g86tlvk/` (sitio «KREA web» del multisitio), con el botón de GitHub Actions. No se usa GitHub Pages: el repositorio es privado.
 
 **Una sola vez:**
 1. GitHub → `krea-web` → Settings → General → Danger Zone → **Change visibility → Private**.
 2. GitHub → `krea-web` → Settings → Secrets and variables → Actions → **New repository secret**: nombre `OVH_FTP_PASSWORD`, valor la contraseña FTP del hosting (la misma que en Gastobra).
-3. OVH → Hosting → **Multisitio**: comprobar que `kreadigitalstudio.es` y `www.kreadigitalstudio.es` apuntan a la carpeta `www`, con SSL. Si es otra carpeta, cambiar `server-dir` en `.github/workflows/publicar-ovh.yml`.
+3. OVH → Hosting → **Multisitio**: comprobar que `kreadigitalstudio.es` y `www.kreadigitalstudio.es` apuntan a la carpeta `104g86tlvk`, con SSL. Si se cambia la carpeta, cambiar `server-dir` en `.github/workflows/publicar-ovh.yml`.
 
 **Cada vez que se quiera publicar:** GitHub → Actions → «Publicar en OVH (kreadigitalstudio.es)» → **Run workflow**.
 

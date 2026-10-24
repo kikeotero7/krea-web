@@ -13,11 +13,11 @@ jobs:
           mkdir web
           cp index.html 404.html favicon.svg robots.txt sitemap.xml .htaccess asistente.php configurar-ia.php contacto.php web/
           cp -r assets portafolio web/
-      - name: Subir por FTP a la carpeta del dominio principal
+      - name: Subir por FTP a la carpeta del sitio KREA web (104g86tlvk)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.cluster131.hosting.ovh.net
           username: zwsusag
           password: ${{ secrets.OVH_FTP_PASSWORD }}
           local-dir: ./web/
-          server-dir: ./www/
+          server-dir: ./104g86tlvk/
