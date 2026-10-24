@@ -51,6 +51,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--ink);color:var(--ivory);font-family:var(--f-body);font-size:16px;line-height:1.6;overflow-x:hidden}
 img{max-width:100%;display:block}
 [hidden]{display:none!important}
+img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 a{color:inherit}
 button{font:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -329,6 +330,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .work b{font-family:var(--f-display);font-weight:500;font-size:22px;text-transform:uppercase;line-height:1.15}
 .work .st{flex:none;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line-dark);border-radius:30px;padding:5px 10px;color:var(--gold)}
 .work .st.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#5fd37c;margin-right:6px;vertical-align:1px}
+.works-apps{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line-dark)}
+.works-apps .shot{aspect-ratio:16/10}
+.works-apps .shot img{object-position:center}
+.work .w-desc{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted-dark);max-width:52ch}
+@media (max-width:860px){.works-apps{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- Método ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:s}
@@ -964,13 +970,17 @@ dialog p{font-size:14px;color:var(--muted-light)}
         <span class="st live">Online · probar Aire</span>
       </div>
     </a>
+    <div class="works works-apps">
+      <a class="work rv" href="https://gastobra.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-gastobra.webp" alt="Pantallas de Gastobra: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Facturas con IA</small><b>Gastobra</b><p class="w-desc">Foto a la factura, la IA la lee y reparte cada producto por carpetas. Relación de gastos e IVA trimestral en PDF para el cliente y el gestor.</p></div><span class="st live">Online</span></div></a>
+      <div class="work rv"><div class="shot"><img src="assets/p-gastoticket.webp" alt="Pantallas de Gastoticket: voz, inicio y resumen de gastos" loading="lazy" width="1600" height="1000"></div><div class="meta"><div><small>Producto propio · Gastos del día a día</small><b>Gastoticket</b><p class="w-desc">Haz una foto al ticket y sabrás cuánto gastas cada mes en casa, coche, compras o salud. Con voz y PDF de gastos.</p></div><span class="st">Próximamente</span></div></div>
+    </div>
     <div class="works">
       <a class="work rv" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-crazycircus.webp" alt="Web de Crazy Circus Tattoo" loading="lazy"></div><div class="meta"><div><small>Estudio de tatuaje · Andorra</small><b>Crazy Circus Tattoo</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-adanero.webp" alt="App de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></a>
+      <a class="work rv" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-adanero.webp" alt="Web de David Adanero, entrenador personal" loading="lazy"></div><div class="meta"><div><small>Entrenamiento personal · Web y app</small><b>David Adanero</b></div><span class="st live">Online</span></div></a>
       <a class="work rv" href="https://velvet.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-velvet.webp" alt="Web de Velvet Contour, maquillaje a domicilio" loading="lazy"></div><div class="meta"><div><small>Atelier de maquillaje · Marca y web</small><b>Velvet Contour</b></div><span class="st live">Online</span></div></a>
       <a class="work rv" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-roberruiz.webp" alt="Web de Rober Ruiz Tattoo" loading="lazy"></div><div class="meta"><div><small>Tatuaje · Triana, Sevilla</small><b>Rober Ruiz Tattoo</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st live">Online</span></div></a>
-      <a class="work rv" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo y escritor" loading="lazy"></div><div class="meta"><div><small>Filosofía y divulgación</small><b>David Murias</b></div><span class="st live">Online</span></div></a>
+      <a class="work rv" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" loading="lazy"></div><div class="meta"><div><small>Tecnificación deportiva · Web y app</small><b>JP Fútbol</b></div><span class="st">En presentación</span></div></a>
+      <a class="work rv" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><div class="shot"><img src="assets/p-murias.webp" alt="Web de David Murias, filósofo" loading="lazy"></div><div class="meta"><div><small>Filosofía práctica · Andorra</small><b>David Murias</b></div><span class="st live">Online</span></div></a>
     </div>
   </div>
 </section>
@@ -1063,7 +1073,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
       <div><h4>Agencia</h4><ul><li><a href="#agentes">Agentes IA</a></li><li><a href="#packs">Packs</a></li><li><a href="#calculadora">Calculadora</a></li><li><a href="#estudio">Webs, apps y marca</a></li><li><a href="#proyectos">Proyectos</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="https://wa.me/34653807314?text=Hola%20KREA%2C%20quiero%20informaci%C3%B3n%20sobre%20agentes%20de%20IA%20para%20mi%20negocio." target="_blank" rel="noopener">WhatsApp · 653 807 314</a></li><li><a href="mailto:contacto@kreadigitalstudio.es">contacto@kreadigitalstudio.es</a></li><li><a href="https://instagram.com/kreadigitalstudio.es" target="_blank" rel="noopener">Instagram</a></li><li><a href="#auditoria">Auditoría gratis</a></li><li><a href="#auditoria">Sevilla · España</a></li></ul></div>
     </div>
-    <div class="copy"><span>© 2026 <span class="krea">KREA Digital Studio</span> · Diseño y desarrollo</span><button type="button" data-legal>Privacidad y cookies</button></div>
+    <div class="copy"><span>© 2026 <span class="krea">KREA Digital Studio</span> · Todos los derechos reservados. Diseño, textos e imágenes protegidos: prohibida su copia o reproducción.</span><button type="button" data-legal>Privacidad y cookies</button></div>
   </div>
 </footer>
 
@@ -1109,12 +1119,16 @@ dialog p{font-size:14px;color:var(--muted-light)}
   <p><strong>Responsable:</strong> KREA Digital Studio · contacto@kreadigitalstudio.es · Sevilla.</p>
   <p><strong>Datos del formulario:</strong> solo los usamos para responder a tu solicitud y preparar la auditoría. No los cedemos a terceros ni los usamos para publicidad. Puedes pedir que los borremos escribiendo a nuestro correo.</p>
   <p><strong>Cookies:</strong> esta web no usa cookies de publicidad ni de seguimiento.</p>
+  <p><strong>Propiedad intelectual:</strong> el diseño, el código, los textos, las fotografías y las capturas de esta web y de los proyectos que muestra pertenecen a KREA Digital Studio o a sus clientes. Queda prohibida su copia, reproducción o uso, total o parcial, sin autorización por escrito.</p>
   <form method="dialog" style="background:none;padding:0;display:block"><button class="btn btn-gold">Entendido</button></form>
 </dialog>
 
 <script>
 (function(){
   document.documentElement.classList.add('js');
+  /* Imágenes protegidas: sin menú de guardar imagen ni arrastrar */
+  document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
+  document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
   /* Número de WhatsApp de KREA (formato internacional sin +, ej. 34600111222). Vacío = se usa Instagram. */
   var WA = '34653807314';
   /* Cabecera sólida al hacer scroll */
@@ -1299,6 +1313,7 @@ dialog p{font-size:14px;color:var(--muted-light)}
     [/cl[ií]nica|dental|m[eé]dic|fisio/i,'Para clínicas el agente confirma y recuerda citas, responde dudas de tratamientos y precios y reduce las citas a las que nadie acude.'],
     [/inmobiliar|piso|alquiler|vivienda/i,'Para inmobiliarias el agente responde por cada inmueble, filtra compradores e inquilinos y agenda visitas con tus asesores. Tienes un ejemplo real en la portada.'],
     [/reforma|obra|construc|sgm/i,'Para reformas y construcción el agente recoge fotos y medidas, agenda visitas técnicas y prepara los datos del presupuesto. Hicimos las apps de Construcciones SGM: presupuestos y facturas con asistente, y fichajes de obra. Lo tienes en Proyectos 👇'],
+    [/factura|ticket|gasto|gastobra|gastoticket/i,'Tenemos dos apps propias para ordenar gastos con IA: <b>Gastobra</b>, para facturas de obras, negocios y su IVA trimestral, y <b>Gastoticket</b> (próximamente), para los tickets del día a día. Haces una foto y la IA la lee y la reparte por carpetas.'],
     [/fumar|tabaco|aire/i,'<b>Aire</b> es nuestra app para dejar de fumar: contador en vivo, dinero ahorrado, hitos de salud y un SOS de respiración guiada. La tienes en aire.kreadigitalstudio.es.'],
     [/d[oó]nde|sevilla|ubicaci|oficina/i,'Estamos en Sevilla y trabajamos con negocios de toda España por videollamada.'],
     [/contrato|permanencia/i,'Te lo explicamos todo por escrito antes de empezar: alcance, precio cerrado y condiciones. Nada se activa sin tu visto bueno.'],

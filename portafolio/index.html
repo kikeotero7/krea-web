@@ -74,6 +74,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;l
 .st{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);border:1px solid var(--line);border-radius:30px;padding:3px 10px}
 .st::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--live)}
 .st.soon::before{background:var(--gold)}
+img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 
 /* Servicios y contacto */
 .close{border-top:1px solid var(--line);padding-block:clamp(40px,6vw,72px)}
@@ -113,9 +114,9 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       <p>Webs, apps a medida, marca y agentes de IA para empresas, comercios y profesionales. Cada proyecto está online: abre el enlace y compruébalo en tu móvil.</p>
     </div>
     <div class="facts">
-      <div><b>8</b><span>proyectos online</span></div>
-      <div><b>5</b><span>apps a medida y producto propio</span></div>
-      <div><b>7</b><span>webs con dominio propio</span></div>
+      <div><b>10</b><span>proyectos de KREA</span></div>
+      <div><b>5</b><span>apps a medida y propias</span></div>
+      <div><b>6</b><span>webs de clientes con dominio propio</span></div>
     </div>
   </div>
 </header>
@@ -151,12 +152,34 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       </div>
     </article>
 
+    <article class="p" data-k="app">
+      <a class="shot" href="https://gastobra.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-gastobra.webp" alt="Pantallas de Gastobra: voz, inicio y resumen de gastos" width="1600" height="1000"></a>
+      <div class="txt">
+        <div class="meta"><span>Producto propio de KREA · Facturas con IA</span><span class="st">Online</span></div>
+        <h2>Gastobra</h2>
+        <p>App para ordenar facturas y tickets de compra de cualquier persona, comercio o negocio. Haces una foto, <strong>la IA la lee</strong> y repartes cada producto entre tus carpetas, tocando o con la voz. Saca la relación de gastos en PDF para el cliente y la <strong>trimestral con IVA</strong> para el gestor.</p>
+        <ul class="tags"><li>Lectura con IA</li><li>Voz</li><li>PDF e IVA trimestral</li><li>Datos en la nube</li></ul>
+        <div class="links"><a class="go" href="https://gastobra.kreadigitalstudio.es/" target="_blank" rel="noopener">Abrir Gastobra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">gastobra.kreadigitalstudio.es</span></div>
+      </div>
+    </article>
+
+    <article class="p" data-k="app">
+      <div class="shot"><img src="../assets/p-gastoticket.webp" alt="Pantallas de Gastoticket: voz, inicio y resumen de gastos" width="1600" height="1000"></div>
+      <div class="txt">
+        <div class="meta"><span>Producto propio de KREA · Gastos del día a día</span><span class="st soon">Próximamente</span></div>
+        <h2>Gastoticket</h2>
+        <p>De la familia de Gastobra, para los gastos de cualquier persona. Una foto al ticket y la IA lo reparte entre <strong>Casa, Coche, Compras o Salud</strong>. Te dice cuánto llevas gastado cada mes y en qué, y saca el PDF de gastos.</p>
+        <ul class="tags"><li>Lectura con IA</li><li>Resumen mensual</li><li>Voz</li><li>PDF</li></ul>
+        <div class="links"><span class="url">En prueba privada · lanzamiento en 2027</span></div>
+      </div>
+    </article>
+
     <article class="p" data-k="web app">
-      <a class="shot" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-adanero.webp" alt="App de entrenamiento de David Adanero" width="960" height="674"></a>
+      <a class="shot" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-adanero.webp" alt="Web de David Adanero, entrenador personal" width="1280" height="800"></a>
       <div class="txt">
         <div class="meta"><span>Entrenamiento personal</span><span class="st">Online</span></div>
         <h2>David Adanero</h2>
-        <p>Web y app para un entrenador personal: planes, seguimiento de sus clientes y panel diario para organizar los entrenamientos desde el móvil.</p>
+        <p>Web y app para un entrenador personal, preparador físico y readaptador: servicios, grupos, método y reserva de cita en la web, y una app para planificar y seguir a sus clientes.</p>
         <ul class="tags"><li>Web</li><li>App de clientes</li><li>Seguimiento</li></ul>
         <div class="links"><a class="go" href="https://david-adanero.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">david-adanero.kreadigitalstudio.es</span></div>
       </div>
@@ -165,9 +188,9 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
     <article class="p" data-k="web app">
       <a class="shot" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-jpfutbol.webp" alt="Web de JP Fútbol, academia de tecnificación" width="960" height="600"></a>
       <div class="txt">
-        <div class="meta"><span>Tecnificación deportiva · Sevilla</span><span class="st">Online</span></div>
+        <div class="meta"><span>Tecnificación deportiva · Sevilla</span><span class="st soon">En presentación</span></div>
         <h2>JP Fútbol</h2>
-        <p>Web y app para una academia de tecnificación de fútbol: entrenamientos por grupos, porteros y preparación física, con la app para organizar la academia.</p>
+        <p>Web y app para una academia de tecnificación de fútbol en Sevilla: técnica, preparación física y porteros en grupos reducidos, con la app para organizar la academia. Ahora en presentación privada con código de acceso.</p>
         <ul class="tags"><li>Web</li><li>App de academia</li><li>Reservas</li></ul>
         <div class="links"><a class="go" href="https://jpfutbol-web.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">jpfutbol-web.kreadigitalstudio.es</span></div>
       </div>
@@ -178,7 +201,7 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       <div class="txt">
         <div class="meta"><span>Atelier de maquillaje</span><span class="st">Online</span></div>
         <h2>Velvet Contour</h2>
-        <p>Marca y web para un atelier de maquillaje a domicilio: logotipo y sellos, fotografía de portada, técnicas, marcas de trabajo y asistente de consultas con paso a WhatsApp.</p>
+        <p>Marca y web para un atelier de maquillaje a domicilio para novias, madrinas, invitadas y eventos: logotipo y sellos, servicios, técnicas, orientador de estilo y reserva de cita.</p>
         <ul class="tags"><li>Logo y sellos</li><li>Web</li><li>Asistente de consultas</li></ul>
         <div class="links"><a class="go" href="https://velvet.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">velvet.kreadigitalstudio.es</span></div>
       </div>
@@ -189,7 +212,7 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       <div class="txt">
         <div class="meta"><span>Estudio de tatuaje · Andorra</span><span class="st">Online</span></div>
         <h2>Crazy Circus Tattoo</h2>
-        <p>Web con identidad de circo para un estudio de tatuaje: artistas, estilos, galería y petición de cita, con una estética que se reconoce al primer vistazo.</p>
+        <p>Web con identidad de circo para un estudio de tatuaje, piercing y streetwear: equipo, tatuajes, joyas, tienda, prints y reservas, en español y catalán, con asistente de citas.</p>
         <ul class="tags"><li>Web</li><li>Galería</li><li>Citas</li></ul>
         <div class="links"><a class="go" href="https://crazycircus.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">crazycircus.kreadigitalstudio.es</span></div>
       </div>
@@ -200,7 +223,7 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
       <div class="txt">
         <div class="meta"><span>Tatuaje · Triana, Sevilla</span><span class="st">Online</span></div>
         <h2>Rober Ruiz Tattoo</h2>
-        <p>Portfolio para un tatuador de Triana: trabajos, estilo personal y contacto directo para pedir cita.</p>
+        <p>Portfolio para un tatuador de Triana: trabajos, vídeos del proceso, sobre él y reserva de cita por WhatsApp o Instagram.</p>
         <ul class="tags"><li>Web portfolio</li><li>Contacto</li></ul>
         <div class="links"><a class="go" href="https://roberruiz.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">roberruiz.kreadigitalstudio.es</span></div>
       </div>
@@ -209,9 +232,9 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
     <article class="p" data-k="web">
       <a class="shot" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener"><img src="../assets/p-murias.webp" alt="Web de David Murias, filósofo y escritor" width="960" height="674"></a>
       <div class="txt">
-        <div class="meta"><span>Filosofía y divulgación</span><span class="st">Online</span></div>
+        <div class="meta"><span>Filosofía práctica · Andorra</span><span class="st">Online</span></div>
         <h2>David Murias</h2>
-        <p>Web de marca personal para un filósofo y escritor: su enfoque, sus encuentros y su contenido, con un tono sereno y editorial.</p>
+        <p>Web de marca personal para un filósofo y asesor filosófico: su enfoque de filosofía práctica, consultas, conferencias y divulgación, con un tono sereno y editorial.</p>
         <ul class="tags"><li>Marca personal</li><li>Web</li></ul>
         <div class="links"><a class="go" href="https://david-murias.kreadigitalstudio.es/" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="url">david-murias.kreadigitalstudio.es</span></div>
       </div>
@@ -237,7 +260,7 @@ footer{padding-block:24px 40px;font-size:13px;color:var(--muted);border-top:1px 
   </div>
 </section>
 
-<footer><div class="wrap">KREA Digital Studio · Agencia de IA · Sevilla · Proyectos publicados a octubre de 2026</div></footer>
+<footer><div class="wrap">KREA Digital Studio · Agencia de IA · Sevilla · © 2026 KREA Digital Studio · Todos los derechos reservados</div></footer>
 
 <script>
 (function(){

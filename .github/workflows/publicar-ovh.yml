@@ -1,0 +1,23 @@
+name: Publicar en OVH (kreadigitalstudio.es)
+# Se ejecuta a mano desde GitHub → Actions → «Publicar en OVH» → Run workflow.
+# Necesita el secreto OVH_FTP_PASSWORD en Settings → Secrets and variables → Actions.
+on:
+  workflow_dispatch:
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar solo los archivos de la web
+        run: |
+          mkdir web
+          cp index.html 404.html favicon.svg robots.txt sitemap.xml .htaccess asistente.php configurar-ia.php contacto.php web/
+          cp -r assets portafolio web/
+      - name: Subir por FTP a la carpeta del dominio principal
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.cluster131.hosting.ovh.net
+          username: zwsusag
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          local-dir: ./web/
+          server-dir: ./www/
