@@ -1,0 +1,124 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:O;src:url(file:///tmp/claude-0/-home-user-krea-velvet/4b84072b-4d73-5f22-a632-7aba7a4a5a36/scratchpad/fonts/Oswald.ttf)}
+@font-face{font-family:M;src:url(file:///tmp/claude-0/-home-user-krea-velvet/4b84072b-4d73-5f22-a632-7aba7a4a5a36/scratchpad/fonts/Manrope.ttf)}
+@font-face{font-family:C;src:url(file:///tmp/claude-0/-home-user-krea-velvet/4b84072b-4d73-5f22-a632-7aba7a4a5a36/scratchpad/fonts/Cormorant-Italic.ttf)}
+:root{--ink:#090909;--ivory:#f4f0e7;--gold:#caa43a;--gl:#e0c46d;--mut:rgba(244,240,231,.62);--A:url(file:///home/user/krea-web/assets/)}
+*{margin:0;box-sizing:border-box}
+body{background:#333}
+.p{width:1080px;height:1350px;position:relative;overflow:hidden;background:radial-gradient(900px 700px at 85% 35%,#1b1710 0%,#090909 68%);color:var(--ivory);font-family:M;margin-bottom:40px}
+.logo{position:absolute;left:80px;top:78px;width:210px}
+.txt{position:absolute;left:80px;top:200px;right:80px}
+.tag{font:600 22px M;letter-spacing:.32em;color:var(--gold);text-transform:uppercase}
+.h{font:600 108px/0.96 O;text-transform:uppercase;margin-top:22px}
+.s{font:500 italic 56px/1.08 C;color:var(--gl);margin-top:14px}
+.foot{position:absolute;left:80px;right:80px;bottom:66px;display:flex;justify-content:space-between;align-items:center;font:600 24px M;letter-spacing:.06em;color:var(--mut);border-top:1px solid rgba(255,255,255,.16);padding-top:26px}
+.foot b{color:var(--ivory)}
+.num{display:none}
+.chips{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.chips span{border:1px solid rgba(202,164,58,.55);padding:13px 22px;border-radius:40px;font:600 23px M}
+.list{list-style:none;margin-top:40px}
+.list li{font:600 30px M;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;gap:20px;align-items:center}
+.list li b{color:var(--gold);font:600 22px O;letter-spacing:.1em}
+/* 1 portada */
+#p1{background:#090909}
+#p1 .bg{position:absolute;left:0;top:0;width:1080px;height:720px;background:url(file:///home/user/krea-instagram/hero-claro.png) 70% 50%/auto 720px no-repeat}
+#p1 .sh{position:absolute;left:0;top:0;width:1080px;height:722px;background:linear-gradient(180deg,rgba(9,9,9,.45) 0%,rgba(9,9,9,0) 18%,rgba(9,9,9,0) 70%,#090909 100%)}
+#p1 .txt{top:auto;bottom:200px}
+#p1 .h{font-size:116px}
+/* 2 agentes */
+.phone{position:absolute;left:150px;right:150px;top:575px;background:#0b141a;border-radius:36px;border:1px solid rgba(255,255,255,.12);padding:28px 34px 20px;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.chathead{display:flex;align-items:center;gap:16px;font:700 26px M;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:22px}
+.chathead i{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gl),var(--gold));display:block}
+.chathead small{display:block;font:500 19px M;color:#25d366}
+.b{max-width:76%;padding:16px 22px;border-radius:20px;font:500 24px/1.32 M;margin-bottom:14px}
+.b em{display:block;text-align:right;font:500 16px M;font-style:normal;color:rgba(255,255,255,.5);margin-top:6px}
+.in{background:#202c33}.out{background:#3a3220;margin-left:auto}
+/* 3 automatización: flujo */
+.flow{position:absolute;left:80px;right:80px;top:640px;display:grid;grid-template-columns:1fr;gap:0}
+.step{display:flex;align-items:center;gap:26px;padding:26px 30px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.03)}
+.step i{width:64px;height:64px;border-radius:16px;background:rgba(202,164,58,.14);border:1px solid rgba(202,164,58,.5);display:grid;place-items:center;font:600 26px O;color:var(--gl);font-style:normal;flex:none}
+.step div{font:600 30px M}.step small{display:block;font:500 22px M;color:var(--mut);margin-top:4px}
+.arrow{height:34px;margin-left:61px;border-left:2px dashed rgba(202,164,58,.6)}
+/* 4 webs: navegador */
+.browser{position:absolute;left:80px;right:80px;top:620px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 40px 120px rgba(0,0,0,.65);background:#141311}
+.bar{height:46px;display:flex;align-items:center;gap:10px;padding:0 20px;background:#1c1a16}
+.bar i{width:13px;height:13px;border-radius:50%;background:#3b372f;display:block}
+.bar span{margin-left:18px;flex:1;height:26px;border-radius:13px;background:#0f0e0c}
+.browser img{display:block;width:100%;height:500px;object-fit:cover;object-position:top}
+.mon{position:absolute;left:175px;right:175px;top:585px}
+.scr{position:relative;background:#050505;border:14px solid #111;border-bottom-width:14px;border-radius:22px 22px 0 0;overflow:hidden;box-shadow:0 0 0 2px #2a2824,0 50px 120px rgba(0,0,0,.75)}
+.scr img{display:block;width:100%}
+.glass{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.05) 28%,rgba(255,255,255,0) 42%),linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(0,0,0,.18))}
+.chin{height:38px;background:linear-gradient(#cfcac0,#a9a39a);border-radius:0 0 18px 18px;box-shadow:0 0 0 2px #2a2824}
+.neck{width:130px;height:48px;margin:0 auto;background:linear-gradient(90deg,#8d877d,#c9c3b8 50%,#8d877d);clip-path:polygon(12% 0,88% 0,100% 100%,0 100%)}
+.base{width:300px;height:14px;margin:0 auto;border-radius:8px;background:linear-gradient(#d5cfc4,#8f897f);box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.net{position:absolute;inset:0;width:1080px;height:1350px}
+.p3bg{position:absolute;inset:0;background:radial-gradient(520px 520px at 78% 30%,rgba(202,164,58,.20),transparent 70%),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/54px 54px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/54px 54px}
+#p3 .flow{z-index:2}#p3 .step{background:rgba(12,11,9,.82);backdrop-filter:blur(2px)}
+.p2bg{position:absolute;inset:0;background:radial-gradient(120px 120px at 14% 72%,rgba(224,196,109,.35),transparent 70%),radial-gradient(90px 90px at 88% 64%,rgba(224,196,109,.28),transparent 70%),radial-gradient(160px 160px at 92% 88%,rgba(37,211,102,.16),transparent 70%),radial-gradient(70px 70px at 8% 92%,rgba(224,196,109,.3),transparent 70%),radial-gradient(600px 500px at 50% 80%,rgba(202,164,58,.18),transparent 70%)}
+.mob{position:absolute;left:220px;right:220px;top:600px;height:900px;border-radius:70px;background:#0b141a;border:14px solid #1b1a17;box-shadow:0 0 0 2px #3a372f,0 50px 130px rgba(0,0,0,.8),0 0 120px rgba(202,164,58,.18);padding:22px 26px;overflow:hidden}
+.isl{position:absolute;left:50%;top:16px;width:150px;height:40px;margin-left:-75px;border-radius:22px;background:#000}
+.stat{display:flex;justify-content:space-between;font:700 22px M;padding:6px 18px 18px;color:#e9edef}.stat span{font-size:16px;letter-spacing:.06em;opacity:.8}
+.mob .chathead{background:#1f2c33;margin:0 -26px 16px;padding:16px 26px;border:0}
+.wall{padding-top:6px}
+.mob .b{font-size:23px;max-width:80%}
+.p3fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,9,9,.92) 0%,rgba(9,9,9,.55) 45%,rgba(9,9,9,0) 75%)}
+#p2 .foot{display:none}
+.p2sub{font:600 22px M;letter-spacing:.08em;color:var(--mut);margin-top:22px}
+/* 5 apps */
+.ph{position:absolute;width:290px;border-radius:38px;border:8px solid #1d1b17;box-shadow:0 40px 100px rgba(0,0,0,.7)}
+/* 6 marca */
+.boards{position:absolute;left:80px;right:80px;top:650px;height:540px}
+.boards img{position:absolute;width:620px;border-radius:14px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.7)}
+</style></head><body>
+
+<section class="p" id="p1"><div class="bg"></div><div class="sh"></div>
+<img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt"><div class="tag">Agencia de diseño y desarrollo</div>
+<div class="s" style="margin-top:26px;font-size:52px">Especializados en</div>
+<h1 class="h" style="font-size:112px;margin-top:6px">Automatización<br>y agentes IA</h1>
+<div class="chips"><span>Webs</span><span>Apps</span><span>Marca</span><span>Agentes IA</span><span>Automatización</span></div></div>
+<div class="foot"><span><b>kreadigitalstudio.es</b> · Sevilla</span><span class="num">01 / 06</span></div></section>
+
+<section class="p" id="p2"><img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt" style="top:170px"><div class="tag">Agentes de IA</div>
+<h2 class="h">Tu WhatsApp<br>contesta solo.</h2>
+<div class="s">También a las tres de la mañana.</div><div class="p2sub">WhatsApp · Instagram · Teléfono · Correo</div></div>
+<div class="p2bg"></div><div class="mob"><div class="isl"></div><div class="stat"><b>03:07</b><span>▂▄▆ 5G ▮</span></div>
+<div class="chathead"><i></i><div>Tu negocio<small>en línea · agente IA</small></div></div>
+<div class="wall">
+<div class="b in">Hola, ¿tenéis hueco mañana por la tarde?<em>03:07</em></div>
+<div class="b out">¡Hola! Sí: a las 17:30 o a las 19:00. ¿Cuál te viene mejor?<em>03:07 ✓✓</em></div>
+<div class="b in">A las 19:00 perfecto<em>03:08</em></div>
+<div class="b out">Hecho ✅ Reservado. Te mando un recordatorio.<em>03:08 ✓✓</em></div></div></div>
+<div class="foot"><span>WhatsApp · Instagram · Teléfono · Correo</span><span class="num">02 / 06</span></div></section>
+
+<section class="p" id="p3"><div class="p3bg"></div><svg class="net" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g"><stop offset="0" stop-color="#f1d88e"/><stop offset="1" stop-color="#caa43a" stop-opacity="0"/></radialGradient></defs><line x1="546" y1="141" x2="684" y2="128" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="546" y1="141" x2="689" y2="411" stroke="#caa43a" stroke-opacity="0.15" stroke-width="1.4"/><line x1="546" y1="141" x2="682" y2="874" stroke="#caa43a" stroke-opacity="0.32" stroke-width="1.4"/><line x1="543" y1="333" x2="713" y2="286" stroke="#caa43a" stroke-opacity="0.35" stroke-width="1.4"/><line x1="543" y1="333" x2="689" y2="411" stroke="#caa43a" stroke-opacity="0.23" stroke-width="1.4"/><line x1="543" y1="333" x2="696" y2="714" stroke="#caa43a" stroke-opacity="0.23" stroke-width="1.4"/><line x1="543" y1="333" x2="682" y2="874" stroke="#caa43a" stroke-opacity="0.14" stroke-width="1.4"/><line x1="555" y1="502" x2="684" y2="128" stroke="#caa43a" stroke-opacity="0.14" stroke-width="1.4"/><line x1="555" y1="502" x2="682" y2="874" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="560" y1="653" x2="718" y2="576" stroke="#caa43a" stroke-opacity="0.18" stroke-width="1.4"/><line x1="557" y1="827" x2="684" y2="128" stroke="#caa43a" stroke-opacity="0.31" stroke-width="1.4"/><line x1="557" y1="827" x2="689" y2="411" stroke="#caa43a" stroke-opacity="0.16" stroke-width="1.4"/><line x1="684" y1="128" x2="825" y2="272" stroke="#caa43a" stroke-opacity="0.13" stroke-width="1.4"/><line x1="684" y1="128" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.34" stroke-width="1.4"/><line x1="684" y1="128" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.24" stroke-width="1.4"/><line x1="684" y1="128" x2="823" y2="852" stroke="#caa43a" stroke-opacity="0.15" stroke-width="1.4"/><line x1="713" y1="286" x2="832" y2="168" stroke="#caa43a" stroke-opacity="0.24" stroke-width="1.4"/><line x1="713" y1="286" x2="825" y2="272" stroke="#caa43a" stroke-opacity="0.13" stroke-width="1.4"/><line x1="713" y1="286" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.24" stroke-width="1.4"/><line x1="713" y1="286" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.35" stroke-width="1.4"/><line x1="713" y1="286" x2="823" y2="852" stroke="#caa43a" stroke-opacity="0.32" stroke-width="1.4"/><line x1="689" y1="411" x2="832" y2="168" stroke="#caa43a" stroke-opacity="0.28" stroke-width="1.4"/><line x1="689" y1="411" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.18" stroke-width="1.4"/><line x1="689" y1="411" x2="843" y2="554" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="689" y1="411" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.16" stroke-width="1.4"/><line x1="718" y1="576" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.30" stroke-width="1.4"/><line x1="718" y1="576" x2="843" y2="554" stroke="#caa43a" stroke-opacity="0.24" stroke-width="1.4"/><line x1="718" y1="576" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.30" stroke-width="1.4"/><line x1="696" y1="714" x2="825" y2="272" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="696" y1="714" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="696" y1="714" x2="843" y2="554" stroke="#caa43a" stroke-opacity="0.31" stroke-width="1.4"/><line x1="696" y1="714" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.35" stroke-width="1.4"/><line x1="696" y1="714" x2="823" y2="852" stroke="#caa43a" stroke-opacity="0.32" stroke-width="1.4"/><line x1="682" y1="874" x2="825" y2="272" stroke="#caa43a" stroke-opacity="0.31" stroke-width="1.4"/><line x1="682" y1="874" x2="853" y2="420" stroke="#caa43a" stroke-opacity="0.31" stroke-width="1.4"/><line x1="682" y1="874" x2="843" y2="554" stroke="#caa43a" stroke-opacity="0.29" stroke-width="1.4"/><line x1="682" y1="874" x2="835" y2="717" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="832" y1="168" x2="983" y2="491" stroke="#caa43a" stroke-opacity="0.24" stroke-width="1.4"/><line x1="825" y1="272" x2="968" y2="128" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="853" y1="420" x2="968" y2="128" stroke="#caa43a" stroke-opacity="0.13" stroke-width="1.4"/><line x1="853" y1="420" x2="977" y2="334" stroke="#caa43a" stroke-opacity="0.13" stroke-width="1.4"/><line x1="853" y1="420" x2="983" y2="491" stroke="#caa43a" stroke-opacity="0.18" stroke-width="1.4"/><line x1="853" y1="420" x2="988" y2="865" stroke="#caa43a" stroke-opacity="0.18" stroke-width="1.4"/><line x1="843" y1="554" x2="968" y2="128" stroke="#caa43a" stroke-opacity="0.28" stroke-width="1.4"/><line x1="843" y1="554" x2="977" y2="334" stroke="#caa43a" stroke-opacity="0.34" stroke-width="1.4"/><line x1="843" y1="554" x2="983" y2="491" stroke="#caa43a" stroke-opacity="0.22" stroke-width="1.4"/><line x1="843" y1="554" x2="972" y2="673" stroke="#caa43a" stroke-opacity="0.34" stroke-width="1.4"/><line x1="843" y1="554" x2="988" y2="865" stroke="#caa43a" stroke-opacity="0.35" stroke-width="1.4"/><line x1="835" y1="717" x2="968" y2="128" stroke="#caa43a" stroke-opacity="0.34" stroke-width="1.4"/><line x1="835" y1="717" x2="977" y2="334" stroke="#caa43a" stroke-opacity="0.20" stroke-width="1.4"/><line x1="835" y1="717" x2="983" y2="491" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="835" y1="717" x2="972" y2="673" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="835" y1="717" x2="988" y2="865" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="823" y1="852" x2="983" y2="491" stroke="#caa43a" stroke-opacity="0.17" stroke-width="1.4"/><line x1="823" y1="852" x2="972" y2="673" stroke="#caa43a" stroke-opacity="0.26" stroke-width="1.4"/><line x1="823" y1="852" x2="988" y2="865" stroke="#caa43a" stroke-opacity="0.33" stroke-width="1.4"/><circle cx="546" cy="141" r="22" fill="url(#g)" opacity=".5"/><circle cx="546" cy="141" r="5.5" fill="#e0c46d"/><circle cx="543" cy="333" r="22" fill="url(#g)" opacity=".5"/><circle cx="543" cy="333" r="5.5" fill="#e0c46d"/><circle cx="555" cy="502" r="22" fill="url(#g)" opacity=".5"/><circle cx="555" cy="502" r="5.5" fill="#e0c46d"/><circle cx="560" cy="653" r="22" fill="url(#g)" opacity=".5"/><circle cx="560" cy="653" r="5.5" fill="#e0c46d"/><circle cx="557" cy="827" r="22" fill="url(#g)" opacity=".5"/><circle cx="557" cy="827" r="5.5" fill="#e0c46d"/><circle cx="684" cy="128" r="22" fill="url(#g)" opacity=".5"/><circle cx="684" cy="128" r="5.5" fill="#e0c46d"/><circle cx="713" cy="286" r="22" fill="url(#g)" opacity=".5"/><circle cx="713" cy="286" r="5.5" fill="#e0c46d"/><circle cx="689" cy="411" r="22" fill="url(#g)" opacity=".5"/><circle cx="689" cy="411" r="5.5" fill="#e0c46d"/><circle cx="718" cy="576" r="22" fill="url(#g)" opacity=".5"/><circle cx="718" cy="576" r="5.5" fill="#e0c46d"/><circle cx="696" cy="714" r="22" fill="url(#g)" opacity=".5"/><circle cx="696" cy="714" r="5.5" fill="#e0c46d"/><circle cx="682" cy="874" r="22" fill="url(#g)" opacity=".5"/><circle cx="682" cy="874" r="5.5" fill="#e0c46d"/><circle cx="832" cy="168" r="22" fill="url(#g)" opacity=".5"/><circle cx="832" cy="168" r="5.5" fill="#e0c46d"/><circle cx="825" cy="272" r="22" fill="url(#g)" opacity=".5"/><circle cx="825" cy="272" r="5.5" fill="#e0c46d"/><circle cx="853" cy="420" r="22" fill="url(#g)" opacity=".5"/><circle cx="853" cy="420" r="5.5" fill="#e0c46d"/><circle cx="843" cy="554" r="22" fill="url(#g)" opacity=".5"/><circle cx="843" cy="554" r="5.5" fill="#e0c46d"/><circle cx="835" cy="717" r="22" fill="url(#g)" opacity=".5"/><circle cx="835" cy="717" r="5.5" fill="#e0c46d"/><circle cx="823" cy="852" r="22" fill="url(#g)" opacity=".5"/><circle cx="823" cy="852" r="5.5" fill="#e0c46d"/><circle cx="968" cy="128" r="22" fill="url(#g)" opacity=".5"/><circle cx="968" cy="128" r="5.5" fill="#e0c46d"/><circle cx="977" cy="334" r="22" fill="url(#g)" opacity=".5"/><circle cx="977" cy="334" r="5.5" fill="#e0c46d"/><circle cx="983" cy="491" r="22" fill="url(#g)" opacity=".5"/><circle cx="983" cy="491" r="5.5" fill="#e0c46d"/><circle cx="972" cy="673" r="22" fill="url(#g)" opacity=".5"/><circle cx="972" cy="673" r="5.5" fill="#e0c46d"/><circle cx="988" cy="865" r="22" fill="url(#g)" opacity=".5"/><circle cx="988" cy="865" r="5.5" fill="#e0c46d"/></svg><div class="p3fade"></div><img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt"><div class="tag">Automatizaciones</div>
+<h2 class="h">Lo repetitivo,<br>que lo haga<br>la IA.</h2></div>
+<div class="flow">
+<div class="step"><i>01</i><div>Entra un cliente<small>formulario, WhatsApp o correo</small></div></div><div class="arrow"></div>
+<div class="step"><i>02</i><div>La IA lo entiende y responde<small>presupuesto, cita o información</small></div></div><div class="arrow"></div>
+<div class="step"><i>03</i><div>Todo queda registrado<small>agenda, recordatorios y avisos</small></div></div></div>
+<div class="foot"><span>Menos tareas. <b>Más tiempo.</b></span><span class="num">03 / 06</span></div></section>
+
+<section class="p" id="p4"><img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt"><div class="tag">Diseño web</div>
+<h2 class="h">Webs que<br>trabajan<br>por ti.</h2></div>
+<div class="mon"><div class="scr"><img src="file:///home/user/krea-instagram/sgm-desk.png"><i class="glass"></i></div><div class="chin"></div><div class="neck"></div><div class="base"></div></div>
+<div class="foot"><span>Rápidas · a medida · pensadas para vender</span><span class="num">05 / 06</span></div></section>
+
+<section class="p" id="p5"><img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt" style="width:520px"><div class="tag">Apps a medida</div>
+<h2 class="h">Tu negocio,<br>en el<br>bolsillo.</h2>
+<ul class="list"><li><b>01</b>Instalables en móvil</li><li><b>02</b>Datos en la nube</li><li><b>03</b>Reservas y paneles</li><li><b>04</b>PDF y WhatsApp</li></ul></div>
+<img class="ph" style="right:250px;top:330px;transform:rotate(-6deg)" src="file:///home/user/krea-web/assets/m-jp-app.webp">
+<img class="ph" style="right:40px;top:430px;transform:rotate(5deg)" src="file:///home/user/krea-web/assets/m-adanero-app.webp">
+<div class="foot"><span>Apps a medida, <b>sin plantillas</b></span><span class="num">04 / 06</span></div></section>
+
+<section class="p" id="p6"><img class="logo" src="file:///home/user/krea-web/assets/logo-krea-oscuro.webp">
+<div class="txt"><div class="tag">Marca e identidad</div>
+<h2 class="h">Una marca<br>que se<br>recuerda.</h2></div>
+<div class="boards"><img style="left:0;top:0;transform:rotate(-3deg)" src="file:///home/user/krea-web/assets/marca-velvet.webp"><img style="right:0;top:150px;transform:rotate(3deg)" src="file:///home/user/krea-web/assets/marca-murias.webp"></div>
+<div class="foot"><span>Pide tu <b>auditoría gratuita</b> · kreadigitalstudio.es</span><span class="num">06 / 06</span></div></section>
+</body></html>
