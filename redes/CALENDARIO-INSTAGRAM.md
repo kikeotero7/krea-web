@@ -11,7 +11,8 @@ Reglas: máximo 5 hashtags; etiqueta de IA solo en fotos realistas generadas con
 | Sáb 31 oct | 20:30 | Agentes de IA | krea-agentes-ia.jpg | Programada |
 | Mar 3 nov | 13:45 | Apps a medida | krea-apps.jpg | Programada |
 | Jue 5 nov | 20:45 | Webs (SGM) | krea-webs.jpg | Programada |
-| Mar 10 nov | 13:45 | Marca e identidad | krea-marca.jpg | Programada |
+| Mar 10 nov | 13:45 | Apps propias (YouManager y Gastoticket) | krea-apps-propias.jpg | Programada |
+| Jue 12 nov | 20:45 | Marca e identidad | krea-marca.jpg | Programada |
 
 Franjas: mediodía 13:30–14:30 (pausa para comer) y noche 20:30–21:30; mejores días martes, miércoles y jueves.
 
@@ -76,7 +77,23 @@ DM o kreadigitalstudio.es (enlace en la bio).
 #diseñoweb #desarrolloweb #paginaweb #webSevilla #sevilla
 ```
 
-## Marca e identidad · mar 10 nov 13:45
+## Apps propias · mar 10 nov 13:45
+
+```
+Creamos apps para nuestros clientes. Y también las nuestras. 📱
+
+⚽ YouManager: la app del entrenador. Planifica sesiones, dibuja tareas en la pizarra, convoca y sigue el partido desde la banda.
+
+🧾 Gastoticket: haces una foto al ticket y la IA lo apunta solo. Sabes cuánto gastas cada mes y en qué. Muy pronto.
+
+Si las usamos nosotros, es porque funcionan. Y si tienes una idea de app para tu negocio o tu sector, la hacemos realidad.
+
+👉 Cuéntanos tu idea por DM o en kreadigitalstudio.es (enlace en la bio).
+
+#apps #appamedida #inteligenciaartificial #futbol #sevilla
+```
+
+## Marca e identidad · jue 12 nov 20:45
 
 ```
 Una marca que se recuerda. ✦
