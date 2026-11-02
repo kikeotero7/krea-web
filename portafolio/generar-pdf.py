@@ -46,6 +46,16 @@ PROYECTOS = [
      [("App", "Su espacio de trabajo: resumen del día con cómo llega cada cliente, agenda, sesiones, planes, progreso, readaptación, informes y cobros, con vista para sus clientes."),
       ("Web", "Servicios, grupos, método y reserva de cita.")],
      ["App de gestión", "Clientes y planes", "Agenda y cobros", "Web"], "david-adanero.kreadigitalstudio.es", "Online"),
+    ("p-alvaro-velasco.webp", "Peluquería a domicilio · Sevilla", "Álvaro Velasco", "App de agenda y reservas",
+     "Una app con dos accesos: el profesional y sus clientes.",
+     [("Profesional", "Agenda, fichas de clientes, disponibilidad, tarifas y cuentas; cada cita se confirma por WhatsApp con un enlace."),
+      ("Clientes", "Entran con su cuenta, ven los huecos libres y piden cita desde el móvil.")],
+     ["Agenda y reservas", "Área de clientes", "WhatsApp", "Instalable"], "app-alvarovelasco.kreadigitalstudio.es", "Online"),
+    ("p-mudas-falcon.webp", "Cría de halcones · Sevilla Falcons", "Sevilla Falcons · Mudas", "App a medida",
+     "La cría de halcones, ordenada en el móvil.",
+     [("Mudas", "120 mudas por naves con ocupantes y anillas, tratamientos e historial de cada pájaro."),
+      ("Puestas", "Huevos con día y hora, inseminación o natural, fertilidad, nacimientos, avisos y recordatorios; funciona sin cobertura.")],
+     ["App a medida", "Puestas y fertilidad", "Avisos", "Sin cobertura"], "sevillafalcons.kreadigitalstudio.es", "Online"),
     ("p-jpfutbol-app.webp", "Tecnificación deportiva · Sevilla", "JP Fútbol", "App y web",
      "App y web para una academia de tecnificación de fútbol.",
      [("App", "Para el equipo técnico y las familias: grupos del día, asistencia, plan de cada sesión, fichas de jugadores, avisos y packs y pagos."),
@@ -149,10 +159,10 @@ h1,h2{{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;li
 .cover .cv{{position:absolute;left:18mm;top:58mm;width:150mm}}
 .cover h1{{font-size:62pt;margin-top:5mm}}
 .cover .lead{{color:var(--muted);font-size:11.5pt;margin-top:8mm;max-width:120mm}}
-.index{{position:absolute;right:18mm;top:34mm;width:92mm;list-style:none;border-top:1px solid var(--line)}}
-.index li{{display:grid;grid-template-columns:10mm 1fr auto;align-items:baseline;gap:3mm;padding:2.6mm 0;border-bottom:1px solid var(--line)}}
+.index{{position:absolute;right:18mm;top:26mm;width:96mm;list-style:none;border-top:1px solid var(--line)}}
+.index li{{display:grid;grid-template-columns:10mm 1fr auto;align-items:baseline;gap:3mm;padding:1.8mm 0;border-bottom:1px solid var(--line)}}
 .index span{{font-size:8pt;color:var(--gold);letter-spacing:.08em}}
-.index b{{font-family:Oswald,sans-serif;font-weight:500;text-transform:uppercase;font-size:12pt}}
+.index b{{font-family:Oswald,sans-serif;font-weight:500;text-transform:uppercase;font-size:11pt}}
 .index i{{font-style:normal;font-size:8pt;color:var(--muted)}}
 .cover::after{{content:"";position:absolute;left:0;bottom:0;width:100%;height:2.2mm;background:var(--gold)}}
 .proj{{display:grid;grid-template-columns:165mm 1fr;gap:12mm;align-items:center;padding-bottom:22mm}}
