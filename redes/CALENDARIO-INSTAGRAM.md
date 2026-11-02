@@ -13,6 +13,7 @@ Reglas: máximo 5 hashtags; etiqueta de IA solo en fotos realistas generadas con
 | Jue 5 nov | 20:45 | Webs (SGM) | krea-webs.jpg | Programada |
 | Mar 10 nov | 13:45 | Apps propias (YouManager y Gastoticket) | krea-apps-propias.jpg | Programada |
 | Jue 12 nov | 20:45 | Marca e identidad | krea-marca.jpg | Programada |
+| Jue 19 nov | 20:45 | Caso real: Daalcor | krea-daalcor.jpg | Programada |
 
 Franjas: mediodía 13:30–14:30 (pausa para comer) y noche 20:30–21:30; mejores días martes, miércoles y jueves.
 
@@ -111,4 +112,23 @@ En la imagen, dos identidades nuestras: un atelier de maquillaje y la marca pers
 DM o kreadigitalstudio.es (enlace en la bio).
 
 #branding #identidadcorporativa #marcapersonal #diseñografico #sevilla
+```
+
+## Caso real: Daalcor · jue 19 nov 20:45
+
+```
+Presupuestos de obra en minutos. 🏗️
+
+Este es Daalcor Construcciones y Reformas, y esta es la app que le hemos hecho a medida.
+
+🎙️ Cuenta la obra con su voz («baño de 2 × 2,5, quitar azulejos, plato de ducha…») y la IA monta el presupuesto por partidas, con sus precios.
+📲 Con un toque, el PDF le llega al cliente por WhatsApp.
+📊 Facturas, cobros pendientes, clientes y obras, en el móvil y en el ordenador.
+
+Menos papeleo en la oficina y más tiempo en la obra.
+
+👉 ¿Tienes una empresa de reformas o construcción? Te enseñamos cómo funcionaría en la tuya.
+DM o kreadigitalstudio.es (enlace en la bio).
+
+#reformas #construccion #presupuestos #inteligenciaartificial #sevilla
 ```
