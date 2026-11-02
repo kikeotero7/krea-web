@@ -20,6 +20,11 @@ PROYECTOS = [
      [("SGM Presupuestos", "Presupuestos por partidas con asistente, PDF para el cliente, facturas, clientes, obras y gastos, con los datos en la nube entre móvil y ordenador."),
       ("SGM Fichajes", "Control de obra con fichaje por código, zona de la obra, asistencia e incidencias.")],
      ["App de gestión", "Presupuestos y facturas", "Fichajes", "Datos en la nube"], "sgm.kreadigitalstudio.es/portafolio/", "Online"),
+    ("p-daalcor.webp", "Construcción y reformas", "Daalcor Construcciones y Reformas", "App a medida",
+     "App de presupuestos a medida para una empresa de reformas.",
+     [("Presupuestos por voz", "Por partidas con su catálogo de precios o dictados con el asistente de voz con IA; sale el PDF directo al WhatsApp o al correo del cliente."),
+      ("Gestión", "Facturas, cobros pendientes, clientes, obras y gastos, sincronizados entre móvil y ordenador.")],
+     ["App de gestión", "Asistente de voz IA", "PDF por WhatsApp", "Datos en la nube"], "daalcor.kreadigitalstudio.es", "Online"),
     ("p-aire.webp", "Producto propio de KREA · Salud", "Aire · Deja de fumar", "App instalable",
      "Nuestra app para dejar de fumar, un día cada vez.",
      [("En el móvil", "Contador en vivo, dinero ahorrado, hitos de salud, diario y metas, en modo claro y oscuro."),
@@ -84,7 +89,7 @@ paginas.append(f"""<section class="page cover">
 <p class="lead">Apps propias y a medida, webs, marca y agentes de IA para empresas, comercios y profesionales.</p></div>
 <ol class="index">{indice}</ol>
 <p class="online"><a href="https://kreadigitalstudio.es/portafolio/">Ver el portafolio online → kreadigitalstudio.es/portafolio</a></p>
-<div class="foot"><span>© 2026 KREA Digital Studio · Todos los derechos reservados</span><span>Octubre 2026</span></div>
+<div class="foot"><span>© 2026 KREA Digital Studio · Todos los derechos reservados</span><span>Noviembre 2026</span></div>
 </section>""")
 for i, (img, meta, nombre, tipo, frase, bloques, etiquetas, url, estado) in enumerate(PROYECTOS):
     bl = "".join(f'<div class="bl"><b>{e(t)}</b><p>{e(d)}</p></div>' for t, d in bloques)
