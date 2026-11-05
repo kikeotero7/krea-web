@@ -10,7 +10,7 @@ Reglas: máximo 5 hashtags; etiqueta de IA solo en fotos realistas generadas con
 | Mar 27 oct | — | Automatizaciones | (subida a mano) | Publicada |
 | Sáb 31 oct | 20:54 | Agentes de IA | krea-agentes-ia.jpg | Publicada · https://www.instagram.com/p/DfK9Fg2iTn6/ |
 | Mar 3 nov | 14:37 | Apps a medida | krea-apps.jpg | Publicada · https://www.instagram.com/p/DfSAUPVkSsi/ |
-| Jue 5 nov | 20:45 | Webs (SGM) | krea-webs.jpg | Programada |
+| Vie 6 nov | 00:25 | Webs (SGM) | krea-webs.jpg | Publicada (tarde por reinicio) · https://www.instagram.com/p/DfYNJWSCa0E/ |
 | Mar 10 nov | 13:45 | Apps propias (YouManager y Gastoticket) | krea-apps-propias.jpg | Programada |
 | Jue 12 nov | 20:45 | Marca e identidad | krea-marca.jpg | Programada |
 | Jue 19 nov | 20:45 | Caso real: Daalcor | krea-daalcor.jpg | Programada |
